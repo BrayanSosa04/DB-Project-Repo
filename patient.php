@@ -70,7 +70,7 @@
       </select><br></br>
 
       <!--Here should go the specialist/physician ID-->
-      <p>Have you received approval from your physician to see a specialist?</p>
+      <p>Have you received approval from your physician to see a specialists?</p>
       <div class = "yesOrNo">
         <button class = "ynLink" type="button" onclick = "clickedYesOrNo(event, 'yes')">Yes</button>
         <button class = "ynLink" type="button" onclick = "clickedYesOrNo(event, 'no')">No</button>
