@@ -19,7 +19,7 @@
         $result = mysqli_query($conn, $sql); //creates the query
 
         if($result){
-            echo 'Registered Specialist successfully!';
+            echo 'Registered Patient successfully!';
         }
         else{
             echo 'An error occured when registering as a specialist';
