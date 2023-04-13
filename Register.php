@@ -159,22 +159,10 @@
                                 <label className='Label'>Address:</label>
                                 <input id='address_pat' className='address_pat' type='text' title='Please enter your phone number.' minLength="4" maxLength="60" required placeholder='Enter your address.'
                             />
-                            </li>
                             <li className='guest-info'>
-                                <label className='Label'>Billing Information:</label>
-                                <input id='billing_info_pat' className='billing_info_pat' type='text' title='Please enter your phone number.' minLength="4" maxLength="60" required placeholder='Enter your billing information.'
+                                <label className='Label'>Date Created:</label>
+                                <input id='sex_pat' className='Today_Date_pat' type='date' title='Please enter your phone number.' minLength="1" maxLength="1" required placeholder='Enter your sex (M, F, O).'
                             />
-                            </li>
-                            <li className='guest-info'>
-                                <label className='Label'>Sex:</label>
-                                <input id='sex_pat' className='sex_pat' type='text' title='Please enter your phone number.' minLength="1" maxLength="1" required placeholder='Enter your sex (M, F, O).'
-                            />
-                            </li>
-                            <li className='guest-info'>
-                                <label className='Label'>Insurance ID:</label>
-                                <input id='insurance_ID_pat' className='insurance_ID_pat' type='text' title='Please enter your phone number.' minLength="4" maxLength="20" required placeholder='Enter your insurance ID.'
-                            />
-                            </li>
                         </ul>
                         <li>
                             <button data-testid="button" className='Submit' type='submit'>Register</button>
