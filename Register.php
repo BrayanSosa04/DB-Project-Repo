@@ -127,41 +127,41 @@
                         <ul className='boxes-container'>
                             <li className='guest-info'>
                                 <label className='Label'>Username:</label>
-                                <input id='username_pat' className='username_pat' type='text' minLength="2" maxLength="50" title='Please enter the username you will use to sign in.' required placeholder='Enter a desired username.'
+                                <input id='username_pat' name='username_pat' type='text' minLength="2" maxLength="50" title='Please enter the username you will use to sign in.' required placeholder='Enter a desired username.'
                             />
                             </li>
                             <li className='guest-info'>
                                 <label className='Label'>Password:</label>
-                                <input id='password_pat' className='password_pat' type='password' minLength="2" maxLength="50" title='Please enter the password you will use to sign in.' required placeholder='Enter a password.'
+                                <input id='password_pat' name='password_pat' type='password' minLength="2" maxLength="50" title='Please enter the password you will use to sign in.' required placeholder='Enter a password.'
                             />
                             </li>
                             <li className='guest-info'>
                                 <label className='Label'>Full Name:</label>
-                                <input id='fullname_pat' className='fullname_pat' type='text' title='Please enter your full name.' minLength="4" maxLength="25" required placeholder='Enter your full name.'
+                                <input id='fullname_pat' name='fullname_pat' type='text' title='Please enter your full name.' minLength="4" maxLength="25" required placeholder='Enter your full name.'
                             />
                             </li>
                             <li className='guest-info'>
                                 <label className='Label'>Email:</label>
-                                <input id='email_pat' className='email_pat' type='text' title='Please enter your email.' minLength="4" maxLength="50" required placeholder='Enter your email.'
+                                <input id='email_pat' name='email_pat' type='text' title='Please enter your email.' minLength="4" maxLength="50" required placeholder='Enter your email.'
                             />
                             </li>
                             <li className='guest-info'>
                                 <label className='Label'>Phone Number:</label>
-                                <input id='phonenumber_pat' className='phonenumber_pat' type='text' title='Please enter your phone number.' minLength="10" maxLength="10" required placeholder='Enter your phone number.'
+                                <input id='phonenumber_pat' name='phonenumber_pat' type='text' title='Please enter your phone number.' minLength="10" maxLength="10" required placeholder='Enter your phone number.'
                             />
                             </li>
                             <li className='guest-info'>
                                 <label className='Label'>Date of Birth:</label>
-                                <input id='date_of_birth_pat' className='date_of_birth_pat' type='text' title='Please enter your phone number.' minLength="4" maxLength="10" required placeholder='Enter your date of birth.'
+                                <input id='date_of_birth_pat' name='date_of_birth_pat' type='text' title='Please enter your phone number.' minLength="4" maxLength="10" required placeholder='Enter your date of birth.'
                             />
                             </li>
                             <li className='guest-info'>
                                 <label className='Label'>Address:</label>
-                                <input id='address_pat' className='address_pat' type='text' title='Please enter your phone number.' minLength="4" maxLength="60" required placeholder='Enter your address.'
+                                <input id='address_pat' name='address_pat' type='text' title='Please enter your phone number.' minLength="4" maxLength="60" required placeholder='Enter your address.'
                             />
                             <li className='guest-info'>
                                 <label className='Label'>Date Created:</label>
-                                <input id='sex_pat' className='Today_Date_pat' type='date' title='Please enter your phone number.' minLength="1" maxLength="1" required placeholder='Enter your sex (M, F, O).'
+                                <input id='sex_pat' name='Today_Date_pat' type='date' title='Please enter your phone number.' minLength="1" maxLength="1" required placeholder='Enter your sex (M, F, O).'
                             />
                         </ul>
                         <li>
