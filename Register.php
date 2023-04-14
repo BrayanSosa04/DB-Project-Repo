@@ -34,7 +34,8 @@
 
         <label for = "email_pat">Email:</label>
         <input type = "text" id = "email_pat" email_pat = "email_pat" name = "email_pat" maxlength = "30"></input>
-
+        
+        <br></br>
         <label for = "Sex">Select your gender:</label><br></br>
         <input type ="checkbox" id = "M" M = "M" name = "Sex" value = "M">Male</input><br></br>
         <input type ="checkbox" id = "F" F = "F" name = "Sex" value = "F">Female</input><br></br>
