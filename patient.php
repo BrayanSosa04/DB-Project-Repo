@@ -46,7 +46,7 @@ body {
 .tabContent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid 
+  border: 1px solid;
   background-color: lightgoldenrodyellow;
   border-top: none;
 }
