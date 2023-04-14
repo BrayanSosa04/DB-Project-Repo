@@ -1,4 +1,4 @@
-<form action = "Login.php">
+<form action = "Register.php">
     <?php
         include_once 'connectToTheDB.php';
 
@@ -11,11 +11,12 @@
         $Patient_Address = $_POST['address_pat'];
         $Date_Created = $_POST['Today_Date_pat'];
         $Last_Modifiied = $_POST['Today_Date_pat'];
+        $Last_Modified_By = $_POST['username_pat'];
 
 
         //has code for the query
         $sql = "INSERT INTO user_account(Patient_ID, user_account.Password,  Date_Of_Birth, user_account.Address, Phone_Number, Email, Date_Created, Last_Modified_Date, Last_Modified_By) 
-        VALUES ('$Patient_ID', '$Patient_Pass', '$Date_Of_Birth', '$Patient_Address', '$Patient_Phone', '$Patient_Email',  '$Date_Created', '$Last_Modifiied', '$Patient_ID');";
+        VALUES ('$Patient_ID', '$Patient_Pass', '$Date_Of_Birth', '$Patient_Address', '$Patient_Phone', '$Patient_Email',  '$Date_Created', '$Last_Modifiied', '$Last_Modified_By');";
         $result = mysqli_query($conn, $sql); //creates the query
 
         // if($result){
