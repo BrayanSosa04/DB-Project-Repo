@@ -15,16 +15,16 @@
 
 
         //has code for the query
-        $sql = "INSERT INTO user_account(Patient_ID, user_account.Password,  Date_Of_Birth, user_account.Address, Phone_Number, Email, Date_Created, Last_Modified_Date, Last_Modified_By) 
+        $sql = "INSERT INTO user_account
         VALUES ('$Patient_ID', '$Patient_Pass', '$Date_Of_Birth', '$Patient_Address', '$Patient_Phone', '$Patient_Email',  '$Date_Created', '$Last_Modifiied', '$Last_Modified_By');";
         $result = mysqli_query($conn, $sql); //creates the query
 
-        // if($result){
-        //     echo 'Registered Patient Successfully!';
-        // }
-        // else{
-        //     echo 'An error occured when registering as a patient';
-        // }
+        if($result){
+            echo 'Registered Patient Successfully!';
+        }
+        else{
+            echo 'An error occured when registering as a patient';
+        }
     ?>
     <br></br>
     <button type = "submit" name = "submit" >Return to the main page</button>
