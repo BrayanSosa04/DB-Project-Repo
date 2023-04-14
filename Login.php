@@ -27,12 +27,12 @@
 
 <div class ="button">
     <button type="submit" class="button" name="submit">Login</button>
-                    <!--</li>
+                
                     <div className="Login-Options">
                         <p>Don't have an account?
                             <br/><a href="Register.php">Sign up here</a>.
                         </p>
-                    </div>-->
+                    </div>
 </div>
     </form>
 </div>
