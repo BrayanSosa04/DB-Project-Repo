@@ -1,4 +1,4 @@
-<form action = "Register.php">
+<form action = "Login.php">
     <?php
         include_once 'connectToTheDB.php';
 
@@ -10,19 +10,20 @@
         $Date_Of_Birth = $_POST['date_of_birth_pat'];
         $Patient_Address = $_POST['address_pat'];
         $Date_Created = $_POST['Today_Date_pat'];
+        $Last_Modifiied = $_POST['Today_Date_pat'];
 
 
         //has code for the query
         $sql = "INSERT INTO user_account(Patient_ID, user_account.Password,  Date_Of_Birth, user_account.Address, Phone_Number, Email, Date_Created, Last_Modified_Date, Last_Modified_By, Flagged_Delete) 
-        VALUES ('$Patient_ID', '$Patient_Pass', '$Date_Of_Birth', '$Patient_Address', '$Patient_Phone', '$Patient_Email',  '$Date_Created', '$Date_Created', '$Patient_ID', 0);";
+        VALUES ('$Patient_ID', '$Patient_Pass', '$Date_Of_Birth', '$Patient_Address', '$Patient_Phone', '$Patient_Email',  '$Date_Created', '$Last_Modifiied', '$Patient_ID', 0);";
         $result = mysqli_query($conn, $sql); //creates the query
 
         if($result){
             echo 'Registered Patient Successfully!';
         }
-        else{
-            echo 'An error occured when registering as a patient';
-        }
+        // else{
+        //     echo 'An error occured when registering as a patient';
+        // }
     ?>
     <br></br>
     <button type = "submit" name = "submit" >Return to the main page</button>
