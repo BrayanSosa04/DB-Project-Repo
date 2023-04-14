@@ -6,7 +6,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="Login.css">
 </head>
-
+<body>
 <div>
     <p class="title"><span><b>Log In</b></span></p>
 </div>
@@ -36,5 +36,5 @@
 </div>
     </form>
 </div>
-
+</body>
 </html>
