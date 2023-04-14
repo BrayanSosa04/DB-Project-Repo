@@ -15,12 +15,12 @@
     <form action='Login.inc.php' method='POST'>
         <table class="information-boxes">
             <tr>
-                <th><label className="Label">Username:</label></th>
-                <td><input id="username_pat" className="username_pat" type="text" title="Please enter your username." minLength="2" maxLength="50" required placeholder="Enter your username."></td>
+                <th><label class="Label">Username:</label></th>
+                <td><input id="username_pat" name="username_pat" type="text" title="Please enter your username." minLength="2" maxLength="50" required placeholder="Enter your username."></td>
             </tr>                            
             <tr>
-                <th><label className="Label">Password:</label></th>
-                <td><input id="password_pat" className="password_pat" type="password" title="Please enter your password." minLength="2" maxLength="50" required placeholder="Enter your password."></td>
+                <th><label class="Label">Password:</label></th>
+                <td><input id="password_pat" name="password_pat" type="password" title="Please enter your password." minLength="2" maxLength="50" required placeholder="Enter your password."></td>
             </tr>
         </table>
 </div>    
