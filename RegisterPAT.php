@@ -18,9 +18,9 @@
         VALUES ('$Patient_ID', '$Patient_Pass', '$Date_Of_Birth', '$Patient_Address', '$Patient_Phone', '$Patient_Email',  '$Date_Created', '$Last_Modifiied', '$Patient_ID', 0);";
         $result = mysqli_query($conn, $sql); //creates the query
 
-        if($result){
-            echo 'Registered Patient Successfully!';
-        }
+        // if($result){
+        //     echo 'Registered Patient Successfully!';
+        // }
         // else{
         //     echo 'An error occured when registering as a patient';
         // }

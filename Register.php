@@ -10,7 +10,7 @@
         <input type = "text" id = "username_pat" username_pat = "username_pat" name = "username_pat" maxlength = "7"></input>
 
         <label for = "password_pat">Password:</label>
-        <input type = "text" id = "password_pat" password_pat = "password_pat" name = "password_pat" maxlength = "30"></input>
+        <input type = "password" id = "password_pat" password_pat = "password_pat" name = "password_pat" maxlength = "30"></input>
 
         <br></br>
 
