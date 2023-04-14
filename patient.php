@@ -3,65 +3,7 @@
 
 <head>
   <!--This connects the HTML code to CSS code-->
-  <style>
-html {
-  overflow: auto;
-}
-
-body {
-  font-family: Times New Roman;
-  background-color: lightgray;
-}
-  
-  /* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid rgb(2, 121, 2);
-  background-color: green;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: rgb(78, 173, 78);
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: rgb(52, 163, 52);
-}
-
-/* Style the tab content */
-.tabContent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid;
-  background-color: lightgoldenrodyellow;
-  border-top: none;
-}
-
-.yesOrNo {
-  overflow: hidden;
-}
-
-.yesOrNo button.active {
-  background-color: #ccc;
-}
-
-.yesOrNoContent {
-  display:none
-}</style>
+  <link rel="stylesheet" href="patient.css">
   <title>Clinic Database</title>
 </head>
 
@@ -91,7 +33,7 @@ body {
   <form action = "changeAppointment.php" method = "GET">
     <label for = "Patient_ID_RA">Please input your ID:</label>
     <input type = "text" id = "Patient_ID_RA" Patient_ID_RA = "Patient_ID_RA" name = "Patient_ID_RA" maxlength="7">
-    <button type = "submit" name = "submit" >View Appointments to Change</button>
+    <button type = "submit" name = "submit" >View Appointment</button>
   </form>
   </div>
 
@@ -99,7 +41,7 @@ body {
   <form action = "deleteAppointment.php" method = "GET">
     <label for = "Patient_ID_DA">Please input your ID:</label>
     <input type = "text" id = "Patient_ID_DA" Patient_ID_DA = "Patient_ID_DA" name = "Patient_ID_DA" maxlength="7">
-    <button type = "submit" name = "submit" >View Appointments to Cancel</button>
+    <button type = "submit" name = "submit" >View Appointment</button>
   </form>
   </div>
 
@@ -128,7 +70,7 @@ body {
       </select><br></br>
 
       <!--Here should go the specialist/physician ID-->
-      <p>Have you received approval from your physician to see a specialists?</p>
+      <p>Have you received approval from your physician to see a specialist?</p>
       <div class = "yesOrNo">
         <button class = "ynLink" type="button" onclick = "clickedYesOrNo(event, 'yes')">Yes</button>
         <button class = "ynLink" type="button" onclick = "clickedYesOrNo(event, 'no')">No</button>
@@ -164,7 +106,7 @@ body {
     <form action = "viewMedicalHistory.php" method = "GET">
       <label for = "Patient_ID_VMH">Please input your ID:</label>
       <input type = "text" id = "Patient_ID_VMH" Patient_ID_VMH = "Patient_ID_VMH" name = "Patient_ID_VMH" maxlength="7">
-      <button type = "submit" name = "submit" >View Medical History</button>
+      <button type = "submit" name = "submit" >View Appointment</button>
     </form>
   </div>
   <br></br>
