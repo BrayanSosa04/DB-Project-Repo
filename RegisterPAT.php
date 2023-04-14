@@ -16,7 +16,7 @@
 
         //has code for the query
         $sql = "INSERT INTO user_account
-        VALUES ('$Patient_ID', '$Patient_Pass', '$Date_Of_Birth', '$Patient_Address', '$Patient_Phone', '$Patient_Email',  '$Date_Created', '$Last_Modifiied', '$Last_Modified_By');";
+        VALUES ('$Patient_ID', '$Patient_Pass', '$Date_Of_Birth', '$Patient_Address', '$Patient_Phone', '$Patient_Email',  '$Date_Created', '$Last_Modifiied', '$Last_Modified_By', 0);";
         $result = mysqli_query($conn, $sql); //creates the query
 
         if($result){
