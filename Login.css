@@ -1,130 +1,153 @@
-.Login {
-    background-color: rgba(100, 100, 100, 0.35);
-    min-height: 93.7vh;
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-input {
-    box-shadow: 1px 1px 5px;
-    outline: none;
-}
-
-.information-boxes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 8rem 0 8rem 0;
-    margin: 0 10rem 0 10rem;
-    list-style: none;
-    box-shadow: 1px 1px 2px;
-}
-
-.information-boxes .boxes-container {
-    display: flex;
-    list-style: none;
-    flex-direction: column;
-    width: 500px;
-    align-items: flex-end;
-    margin-right: 14rem;
-}
-
-.information-boxes .container-title {
-    color: #4C2600;
-    text-shadow: 2px 2px 1px rgba(110, 110, 0, 0.5);
-    font-size: 28pt;
-    font-weight: bold;
-    margin-bottom: 2rem;
-}
-
-
-
-.information-boxes .container-title2 {
-    color: #4C2600;
-    font-size: 20pt;
-    font-weight: bold;
-    margin-bottom: 2rem;
-}
-
-.information-boxes .container-description {
+.title {
+    padding-top: 25px;
     text-align: center;
-    font-size: 14pt;
-    color: rgb(0, 105, 135);
-    padding-bottom: 1rem;
+    color: rgb(0, 0, 0);
+    font-size: 32pt;
+    padding-bottom: 22px;
+
 }
 
-.information-boxes .container-description a {
-    font-weight: bold;
-    color: rgb(0, 105, 135);
+.title span {
+    background-color: #36ff9b;
+    padding: 5px 60px 8px 60px;
 }
 
-.information-boxes .container-description a:hover {
-    color: rgb(0, 105, 30);
-}
+.Login {
+    grid-area: 1 / 2 / 3 / 5;
+    background-color: #4B5A6C;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 
-.information-boxes .container-option {
-    cursor: pointer;
-    font-size: 10pt;
-    text-decoration: underline;
-    color: rgb(0, 105, 135);
-}
-
-.information-boxes .container-option:hover {
-    color: rgb(0, 105, 30);
-}
-
-.container-option-button {
-    background: none;
-    cursor: pointer;
-    font-size: 14pt;
-    font-weight: bold;
-    text-decoration: underline;
-    border: none;
-    color: rgb(0, 105, 135);
-}
-
-.container-option-button:hover {
-    color: rgb(0, 105, 30);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
 }
 
 .Label {
-    font-size: 20pt;
-    color: #4C2600;
+    color:#000000;
 }
 
-
-.show {
-    display: block;
+.information-boxes {
+    align-self: center;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 20px;
+    font-family: Arial;
+    color: rgb(8, 6, 6);
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-.hide {
-    display: none;
+.information-boxes thead tr {
+    background-color: #97ff36;
+    color: #000000;
+    text-align: left;
 }
 
-.showInvalid {
-    display: block;
+.information-boxes th {
+    background-color: #a8ff36;
+    color: #ffffff;
+    padding: 12px 15px;
+}
+
+.information-boxes td {
+    padding: 12px 15px;
     text-align: center;
-    color: rgb(160, 0, 0);
-    margin-bottom: 1rem;
 }
 
-.Submit {
-    font-size: 14pt;
-    background-color: rgb(160, 250, 50);
-    width: 100px;
-    padding: 0 0.5rem 0 0.5rem;
-    height: 2.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.35);
-    border-radius: 50px;
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-sizing: border-box;
+    color: rgb(255, 253, 253);
+}
+
+option:not(:first-of-type) {
+    color: black;
+}
+
+::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+.button {
+    align-items: center;
+    background-color: #c6ff36;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
     cursor: pointer;
-    margin-bottom: 1rem;
+    display: flex;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: 50;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    min-height: 1rem;
+    position: relative;
+    transition: all 250ms;
+    touch-action: manipulation;
+    top: 25%;
+    width: 20%;
 }
 
-.Submit:hover {
-    background-color: rgb(155, 230, 45);
-    box-shadow: 1px 1px 1px;
+.button:hover,
+.button:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
 }
 
-.signup-text {
-    text-align: center;
-    font-size: 14pt;
-    opacity: 0.6;
+.button:hover {
+    transform: translateY(-1px);
+}
+
+.button:active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+}
+
+input[type=number],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-sizing: border-box;
+    color: white;
+}
+
+input[type=date], input[type=password],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-sizing: border-box;
+    color: white;
 }
