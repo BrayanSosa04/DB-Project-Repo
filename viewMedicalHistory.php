@@ -21,11 +21,11 @@
             include_once 'connectToTheDB.php';
 
             $Patient_ID_VMH = $_GET['Patient_ID_VMH'];
-            $sql = "SELECT MEDICAL_HISTORY.Diagnosis_Test, MEDICAL_HISTORY.Diagnosis_Results, 
-                           MEDICAL_HISTORY.Asso_Physician, MEDICAL_HISTORY.Asso_Specialist, 
-                           MEDICAL_HISTORY.Appointment_Time
-                    FROM MEDICAL_HISTORY, PATIENTS
-                    WHERE MEDICAL_HISTORY.Patient_ID = '$Patient_ID_VMH' AND MEDICAL_HISTORY.Flagged_Delete = 0;";
+            $sql = "SELECT medical_history.Diagnosis_Test, medical_history.Diagnosis_Results, 
+                           medical_history.Asso_Physician, medical_history.Asso_Specialist, 
+                           medical_history.Appointment_Time
+                    FROM medical_history, PATIENTS
+                    WHERE medical_history.Patient_ID = '$Patient_ID_VMH' AND PATIENTS.Patient_ID = '$Patient_ID_VMH' AND medical_history.Flagged_Delete = 0;";
             $result = mysqli_query ($conn, $sql);
             $resultCheck = mysqli_num_rows($result);
             if ($resultCheck > 0){
