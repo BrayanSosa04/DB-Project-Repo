@@ -13,13 +13,21 @@
         $Last_Modifiied = $_POST['Today_Date_pat'];
         $Last_Modified_By = $_POST['username_pat'];
 
+        $Sex = $_POST['Sex'];
+        $Name = $_POST['name_pat'];
+        $Patient_Age = $_POST['p_age'];
+
 
         //has code for the query
         $sql = "INSERT INTO user_account(Patient_ID, `Password`, Date_Of_Birth, `Address`, Phone_Number, Email, Date_Created, Last_Modified_Date, Last_Modified_By, Flagged_Delete)
         VALUES ('$Patient_ID', '$Patient_Pass', '$Date_Of_Birth', '$Patient_Address', '$Patient_Phone', '$Patient_Email',  '$Date_Created', '$Last_Modifiied', '$Last_Modified_By', 0);";
         $result = mysqli_query($conn, $sql); //creates the query
 
-        if($result){
+        $sql2 = "INSERT INTO patients(Patient_ID, `Name`, Patient_Phone_Number, Patient_Email, Date_Of_Birth, Patient_Age, Patient_Sex, Patient_Address, Physician_Approval, Date_Created, Last_Modified_Date, Last_Modified_By, Flagged_Delete)
+        VALUES('$Patient_ID', '$Name', '$Patient_Phone', '$Patient_Email', '$Date_Of_Birth', '$Patient_Age', '$Sex', '$Patient_Address', 0, '$Date_Created', '$Last_Modifiied', '$Last_Modified_By', 0);";
+        $result2 = mysqli_query($conn, $sql2);
+
+        if($result && $result2){
             echo 'Registered Patient Successfully!';
         }
         else{
