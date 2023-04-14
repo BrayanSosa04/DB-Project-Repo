@@ -14,8 +14,8 @@
 
 
         //has code for the query
-        $sql = "INSERT INTO user_account(Patient_ID, user_account.Password,  Date_Of_Birth, user_account.Address, Phone_Number, Email, Date_Created, Last_Modified_Date, Last_Modified_By, Flagged_Delete) 
-        VALUES ('$Patient_ID', '$Patient_Pass', '$Date_Of_Birth', '$Patient_Address', '$Patient_Phone', '$Patient_Email',  '$Date_Created', '$Last_Modifiied', '$Patient_ID', 0);";
+        $sql = "INSERT INTO user_account(Patient_ID, user_account.Password,  Date_Of_Birth, user_account.Address, Phone_Number, Email, Date_Created, Last_Modified_Date, Last_Modified_By) 
+        VALUES ('$Patient_ID', '$Patient_Pass', '$Date_Of_Birth', '$Patient_Address', '$Patient_Phone', '$Patient_Email',  '$Date_Created', '$Last_Modifiied', '$Patient_ID');";
         $result = mysqli_query($conn, $sql); //creates the query
 
         // if($result){
