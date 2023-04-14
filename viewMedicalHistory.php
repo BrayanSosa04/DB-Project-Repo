@@ -24,8 +24,8 @@
             $sql = "SELECT medical_history.Diagnosis_Test, medical_history.Diagnosis_Results, 
                            medical_history.Asso_Physician, medical_history.Asso_Specialist, 
                            medical_history.Appointment_Time
-                    FROM medical_history, PATIENTS
-                    WHERE medical_history.Patient_ID = '$Patient_ID_VMH' AND PATIENTS.Patient_ID = '$Patient_ID_VMH' AND medical_history.Flagged_Delete = 0;";
+                    FROM medical_history, patients
+                    WHERE medical_history.Patient_ID = '$Patient_ID_VMH' AND patients.Patient_ID = '$Patient_ID_VMH' AND medical_history.Flagged_Delete = 0;";
             $result = mysqli_query ($conn, $sql);
             $resultCheck = mysqli_num_rows($result);
             if ($resultCheck > 0){
