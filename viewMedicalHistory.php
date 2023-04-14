@@ -25,7 +25,7 @@
                            MEDICAL_HISTORY.Asso_Physician, MEDICAL_HISTORY.Asso_Specialist, 
                            MEDICAL_HISTORY.Appointment_Time
                     FROM MEDICAL_HISTORY, PATIENTS
-                    WHERE MEDICAL_HISTORY.Patient_ID = '$Patient_ID_VMH' AND PATIENTS.Patient_ID = '$Patient_ID_VMH' AND MEDICAL_HISTORY.Flagged_Delete = 0;";
+                    WHERE MEDICAL_HISTORY.Patient_ID = '$Patient_ID_VMH' AND MEDICAL_HISTORY.Flagged_Delete = 0;";
             $result = mysqli_query ($conn, $sql);
             $resultCheck = mysqli_num_rows($result);
             if ($resultCheck > 0){
