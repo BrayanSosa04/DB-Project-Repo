@@ -7,7 +7,7 @@
 <body>
     <form action = "RegisterPAT.php" method = "POST">
         <label for = "name_pat">Full Name:</label>
-        <input type = "text" id = "name_pat" name_pat = "name_pat" name = "name_pat" maxlength = "30"></input>
+        <input type = "text" id = "name_pat" name_pat = "name_pat" name = "name_pat" maxlength = "30" placeholder = "John Doe"></input>
 
 
         <label for = "username_pat">Username:</label>
@@ -19,13 +19,13 @@
         <br></br>
 
         <label for = "p_age">Your age:</label>
-        <input type = "number" id = "p_age" p_age = "p_age" name = "p_age"></input>
+        <input type = "number" id = "p_age" p_age = "p_age" name = "p_age" placeholder = "21"></input>
 
         <label for = "date_of_birth_pat">Date of Birth:</label>
         <input type = "date" id = "date_of_birth_pat" date_of_birth_pat = "date_of_birth_pat" name = "date_of_birth_pat"></input>
 
         <label for = "address_pat">Address:</label>
-        <input type = "text" id = "address_pat" address_pat = "address_pat" name = "address_pat" maxlength = "40"></input>
+        <input type = "text" id = "address_pat" address_pat = "address_pat" name = "address_pat" maxlength = "40" placeholder = "123 Oaks Dr."></input>
 
         <label for = "phonenumber_pat">Phone Number:</label>
         <input type = "text" id = "phonenumber_pat" phonenumber_pat = "phonenumber_pat" name = "phonenumber_pat" maxlength = "10" placeholder = "XXXXXXXXXX"></input>
@@ -35,7 +35,7 @@
         <label for = "email_pat">Email:</label>
         <input type = "text" id = "email_pat" email_pat = "email_pat" name = "email_pat" maxlength = "30"></input>
 
-        <label for = "Sex">Select your gender:</label>
+        <label for = "Sex">Select your gender:</label><br></br>
         <input type ="checkbox" id = "M" M = "M" name = "Sex" value = "M">Male</input><br></br>
         <input type ="checkbox" id = "F" F = "F" name = "Sex" value = "F">Female</input><br></br>
         <input type ="checkbox" id = "O" O = "O" name = "Sex" value = "O">Other</input><br></br>
