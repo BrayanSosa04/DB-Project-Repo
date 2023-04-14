@@ -5,7 +5,6 @@
         // $variable_name = $_method_of_the_form['name_for_the_input']
         $Patient_ID = $_POST['username_pat'];
         $Patient_Pass = $_POST['password_pat'];
-        $Patient_Name = $_POST['fullname_pat'];
         $Patient_Email = $_POST['email_pat'];
         $Patient_Phone = $_POST['phonenumber_pat'];
         $Date_Of_Birth = $_POST['date_of_birth_pat'];
