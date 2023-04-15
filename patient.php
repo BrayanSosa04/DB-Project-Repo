@@ -140,7 +140,21 @@ body {
       <input type = "text" id = "Physician_ID_Appointment" Physician_ID_Appointment = "Physician_ID_Appointment"  name = "Physician_ID_Appointment_Yes" maxlength = "7"><br></br>
 
       <label for="Specialist_ID_Appointment">Select the specialist that you would like to see:</label>
-      <input type = "text" id = "Specialist_ID_Appointment" Specialist_ID_Appointment = "Specialist_ID_Appointment" name = "Specialist_ID_Appointment" maxlength="7">
+      <select id = "Specialist_ID_Appointment" Specialist_ID_Appointment = "Specialist_ID_Appointment" name = "Specialist_ID_Appointment">
+        <?php 
+          include_once 'connectToTheDB.php';
+
+          $sqlS = "SELECT * FROM specialist;";
+          $resultS = mysqli_query($con, $sqlS);
+
+          while($rS = mysqli_fetch_array($resultS)){
+        ?>  
+            <option value = <?php echo $rS['Employee_ID']; ?>><?php echo $rs['Employee_Name']; ?></option>
+        
+          <?php
+          }
+          ?>
+      </select>
       </div>
 
       <div id = "no" class = "yesOrNoContent">
