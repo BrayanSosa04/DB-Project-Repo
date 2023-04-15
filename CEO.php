@@ -20,8 +20,11 @@
   <section id="OSV">
     <h2 id="OfficeSummary">Office Summary</h2>
     <form action = "office_report.php" method = "GET">
-      <label for = "OSVinput">Please input the minimum number of departments per office:</label>
-      <input type = "number" id = "OSVinput" OSVinput = "OSVinput" name = "OSVinput">
+      <label for = "OSVinput"># of Departments:</label>
+      <input type = "text" id = "OSVinput" OSVinput = "OSVinput" name = "OSVinput">
+
+      <label for = "OSVinput2"># of Specialists:</label>
+      <input type = "text" id = "OSVinput2" OSVinput = "OSVinput2" name = "OSVinput2">
       <button type = "submit" id = "OSVsubmit" name = "OSVsubmit">View Office Report</button>
     </form>
   </section>
@@ -29,8 +32,11 @@
   <section id="DSV">
     <h2 id="DoctorSummary">Doctor Summary</h2>
     <form action = "doctor_report.php" method = "GET">
-      <label for = "DSVinput">Please input the minimum salary of physicians that you would like to see:</label>
-      <input type = "number" id = "DSVinput" DSVinput = "DSVinput" name = "DSVinput">
+      <label for = "DSVinput">Salary:</label>
+      <input type = "text" id = "DSVinput" DSVinput = "DSVinput" name = "DSVinput">
+
+      <label for = "DSVinput2">Office ID:</label>
+      <input type = "text" id = "DSVinput2" DSVinput = "DSVinput2" name = "DSVinput2">
       <button type = "submit" id = "DSVsubmit" name = "DSVsubmit">View Doctor Report</button>
       </form>
   </section>
@@ -38,13 +44,14 @@
   <section id="RSV">
     <h2 id="Revenue Summary">Revenue Summary</h2>
     <form action = "revenue_report.php" method = "GET">
-      <label for = "RSVinput">Please input the max revenue per office:</label>
-      <input type = "number" id = "RSVinput" RSVinput = "RSVinput" name = "RSVinput">
+      <label for = "RSVinput">Revenue:</label>
+      <input type = "text" id = "RSVinput" RSVinput = "RSVinput" name = "RSVinput">
       <button type = "submit" id = "RSVsubmit" name = "RSVsubmit">View Revenue Report</button>
     </form>
+    <form action = "revenue_report2.php" method = "GET">
+      <button type = "submit" id = "RSVsubmit2" name = "RSVsubmit2">Overbudget Offices</button>
+    </form>
   </section>
-
-  <button onclick = "location.replace('Login.php');">Log out</button>
 </body>
 
 <footer>

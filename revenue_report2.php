@@ -23,21 +23,19 @@
   <?php
     include_once 'connectToTheDB.php';
 
-    $RSVinput = $_GET['RSVinput'];
     $sql3 = "SELECT *
             FROM Company_Expenditures
-            WHERE Office_Difference <= '$RSVinput';";
+            WHERE Office_Difference <= 0;";
     $result3 = mysqli_query($conn, $sql3);
     $resultCheck3 = mysqli_num_rows($result3);
-
-    //If error, add $ infront of RSVinput
 
     if($resultCheck3 > 0) {
       while($row3 = mysqli_fetch_assoc($result3)) {
         echo "<tr><td>" . $row3["Office_ID"] . "<td></td>" . $row3["Office_Expenditures"] . "</td><td>" . $row3["Budget"] . "</td><td>" . $row3["Office_Difference"] . "</td></tr>";
       }
-    } else {
-      echo "No revenue summary found";
+    } 
+    else {
+      echo "No office overbudget";
     }
   ?>
 </table>

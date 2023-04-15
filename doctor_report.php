@@ -1,5 +1,9 @@
 <form action = "CEO.php">
 <style>
+    body {
+      background-color: lightgray;
+    }
+    
     table, th, td {
     border: 2px solid rgb(2, 2, 2);
     table-layout: fixed;
@@ -19,11 +23,14 @@
     include_once 'connectToTheDB.php';
 
     $DSVinput = $_GET['DSVinput'];
+    $DSVinput2 = $_GET['DSVinput2'];
     $sql2 = "SELECT *
-            FROM physician_info_per_office
-            WHERE Salary >= $DSVinput;";
+            FROM Physician_Info_Per_Office
+            WHERE Salary >= '$DSVinput' AND OFFICE_ID = '$DSVinput2';";
     $result2 = mysqli_query($conn, $sql2);
     $resultCheck2 = mysqli_num_rows($result2);
+
+    //If error, add $ infront of DSVinput and DSVinput2 in the WHERE clause of sql2. Other issues might arrise from AND and ';"
 
     if($resultCheck2 > 0) {
       while($row2 = mysqli_fetch_assoc($result2)) {
