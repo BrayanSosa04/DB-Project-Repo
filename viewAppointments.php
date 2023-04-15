@@ -10,6 +10,10 @@ text-align: center;
 }
 </style>
 
+<form action = "patient.php">
+    <button type = "submit" name = "submit" >Return to the main page</button>
+</form>
+
 <table style = "float:left">
     <tr>
     <th>Patient Name</th>
@@ -40,14 +44,3 @@ text-align: center;
         }
     ?>
 </table>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<form action = "patient.php">
-    <button type = "submit" name = "submit" >Return to the main page</button>
-</form>
