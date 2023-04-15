@@ -145,7 +145,7 @@ body {
           include_once 'connectToTheDB.php';
 
           $sqlS = "SELECT * FROM specialist;";
-          $resultS = mysqli_query($con, $sqlS);
+          $resultS = mysqli_query($conn, $sqlS);
 
           while($rS = mysqli_fetch_array($resultS)){
         ?>  
