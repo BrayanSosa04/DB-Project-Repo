@@ -136,8 +136,22 @@ body {
       </div>
       
       <div id = "yes" class = "yesOrNoContent">
-      <label for = "Physician_ID_Appointment">Physician ID that gave you the approval:</label>
-      <input type = "text" id = "Physician_ID_Appointment" Physician_ID_Appointment = "Physician_ID_Appointment"  name = "Physician_ID_Appointment_Yes" maxlength = "7"><br></br>
+      <label for = "Physician_ID_Appointment">Select the physician that gave you the approval:</label>
+      <select id = "Physician_ID_Appointment" Physician_ID_Appointment = "Physician_ID_Appointment"  name = "Physician_ID_Appointment_Yes" >
+      <?php 
+        include_once 'connectToTheDB.php';
+
+        $sqlPYes = "SELECT * FROM physician;";
+        $resultPYes =  mysqli_query($conn, $sqlPYes);
+
+        while($rPYes = mysqli_fetch_array($resultPYes)){
+      ?>
+          <option value = "<?php echo $rPYes['Employee_ID']; ?>"><?php echo $rPYes['Employee_Name']; ?></option>
+      <?php
+        }
+      ?>
+      </select>
+      <br></br>
 
       <label for="Specialist_ID_Appointment">Select the specialist that you would like to see:</label>
       <select id = "Specialist_ID_Appointment" Specialist_ID_Appointment = "Specialist_ID_Appointment" name = "Specialist_ID_Appointment">
