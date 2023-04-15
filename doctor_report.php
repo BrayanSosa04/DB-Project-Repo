@@ -25,7 +25,7 @@
     $DSVinput = $_GET['DSVinput'];
     $DSVinput2 = $_GET['DSVinput2'];
     $sql2 = "SELECT *
-            FROM Physician_Info_Per_Office
+            FROM physician_info_per_office
             WHERE Salary >= '$DSVinput' AND OFFICE_ID = '$DSVinput2';";
     $result2 = mysqli_query($conn, $sql2);
     $resultCheck2 = mysqli_num_rows($result2);
