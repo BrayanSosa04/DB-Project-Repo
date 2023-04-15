@@ -122,10 +122,19 @@ body {
 
       <!--Selecting an Office-->
       <label for="Office_Address_Appointment">Select an office:</label>
-      <select name="Office_Address_Appointment" id="Office_Address_Appointment">
-        <option value="1234 Oaks Dr.">1234 Oaks Dr.</option>
-        <option value="7584 DreamWorks Ln.">7584 Dream Works Ln.</option>
-        <option value="9462 Door Dash St.">9462 Door Dash St.</option>
+      <select name="Office_Address_Appointment" Office_Address_Appointment = "Office_Address_Appointment" id="Office_Address_Appointment">
+      <?php 
+        include_once 'connectToTheDB.php';
+
+        $sqlO = "SELECT * FROM offices;";
+        $resultO = mysqli_query($conn, $sqlO);
+
+        while($rO = mysqli_fetch_array($resultO)){
+      ?>
+          <option value= "<?php echo $rO['ADDRESS']?>"><?php echo $rO['ADDRESS']?></option>
+      <?php
+        }
+      ?>
       </select><br></br>
 
       <!--Here should go the specialist/physician ID-->
