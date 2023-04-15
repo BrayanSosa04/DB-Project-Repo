@@ -5,7 +5,7 @@
     <title>Clinic Database</title>
 </head>
 <body>
-    <form action = "RegisterPAT.php" method = "POST">
+    <form action = "Login.php" method = "POST">
         <label for = "name_pat">Full Name:</label>
         <input type = "text" id = "name_pat" name_pat = "name_pat" name = "name_pat" maxlength = "30" placeholder = "John Doe"></input>
 
@@ -34,7 +34,7 @@
 
         <label for = "email_pat">Email:</label>
         <input type = "text" id = "email_pat" email_pat = "email_pat" name = "email_pat" maxlength = "30"></input>
-        
+
         <br></br>
         <label for = "Sex">Select your gender:</label><br></br>
         <input type ="checkbox" id = "M" M = "M" name = "Sex" value = "M">Male</input><br></br>
