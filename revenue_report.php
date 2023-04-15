@@ -25,7 +25,7 @@
 
     $RSVinput = $_GET['RSVinput'];
     $sql3 = "SELECT *
-            FROM Company_Expenditures
+            FROM company_expenditures
             WHERE Office_Difference <= '$RSVinput';";
     $result3 = mysqli_query($conn, $sql3);
     $resultCheck3 = mysqli_num_rows($result3);
