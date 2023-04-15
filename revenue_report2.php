@@ -31,7 +31,7 @@
 
     if($resultCheck3 > 0) {
       while($row3 = mysqli_fetch_assoc($result3)) {
-        echo "<tr><td>" . $row3["Office_ID"] . "<td></td>" . $row3["Office_Expenditures"] . "</td><td>" . $row3["Budget"] . "</td><td>" . $row3["Office_Difference"] . "</td></tr>";
+        echo "<tr><td>" . $row3["OFFICE_ID"] . "</td><td>" . $row3["Office_Expenditures"] . "</td><td>" . $row3["Budget"] . "</td><td>" . $row3["Office_Difference"] . "</td></tr>";
       }
     } 
     else {

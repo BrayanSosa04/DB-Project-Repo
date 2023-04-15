@@ -46,6 +46,7 @@
     <form action = "revenue_report.php" method = "GET">
       <label for = "RSVinput">Revenue:</label>
       <input type = "text" id = "RSVinput" RSVinput = "RSVinput" name = "RSVinput">
+      <br></br>
       <button type = "submit" id = "RSVsubmit" name = "RSVsubmit">View Revenue Report</button>
     </form>
     <form action = "revenue_report2.php" method = "GET">
