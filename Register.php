@@ -5,7 +5,7 @@
     <title>Clinic Database</title>
 </head>
 <body>
-    <form action = "Login.php" method = "POST">
+    <form action = "RegisterPAT.php" method = "POST">
         <label for = "name_pat">Full Name:</label>
         <input type = "text" id = "name_pat" name_pat = "name_pat" name = "name_pat" maxlength = "30" placeholder = "John Doe"></input>
 

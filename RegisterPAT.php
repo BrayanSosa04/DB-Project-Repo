@@ -1,4 +1,4 @@
-<form action = "Register.php">
+<form action = "Login.php">
     <?php
         include_once 'connectToTheDB.php';
 
