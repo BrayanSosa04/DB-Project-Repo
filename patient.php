@@ -163,7 +163,7 @@ body {
           <?php 
             include_once 'connectToTheDB.php';
 
-            $sqlPNo = "SELECT * FROM physiscian;";
+            $sqlPNo = "SELECT * FROM physician;";
             $resultPNo =  mysqli_query($conn, $sqlPNo);
 
             while($rPNo = mysqli_fetch_array($resultPNo)){
