@@ -9,6 +9,19 @@ width: 75%;
 text-align: center;
 }
 </style>
+<form action = "deleteAppointmentSucc.php" method = "POST">
+    <label for = "Patient_ID">Please input your ID:</label>
+    <input type = "text" id = "Patient_ID" Patient_ID = "Patient_ID" name = "Patient_ID" maxlength="7">
+    <br></br>
+    <label for = "Appointment_Time">Please select the appointment date and time you would like to cancel:</label>
+    <input type = "datetime-local" id = "Appointment_Time" Appointment_Time = "Appointment_Time" name = "Appointment_Time">
+    <br></br>
+
+    <button type = "submit" name = "submit">Cancel your Appointment</button>
+
+    <button type = "submit" name = "submit_p" formaction = "patient.php">Return to the main page</button>
+</form>
+<br></br>
 
 <table style = "float:left">
     <tr>
@@ -40,18 +53,3 @@ text-align: center;
         }
     ?>
 </table>
-
-<form action = "deleteAppointmentSucc.php" method = "POST">
-    <br></br>
-    <label for = "Patient_ID">Please input your ID:</label>
-    <input type = "text" id = "Patient_ID" Patient_ID = "Patient_ID" name = "Patient_ID" maxlength="7">
-    <br></br>
-    <label for = "Appointment_Time">Please select the appointment date and time you would like to cancel:</label>
-    <input type = "datetime-local" id = "Appointment_Time" Appointment_Time = "Appointment_Time" name = "Appointment_Time">
-    <br></br>
-
-    <button type = "submit" name = "submit">Cancel your Appointment</button>
-
-    <button type = "submit" name = "submit_p" formaction = "patient.php">Return to the main page</button>
-</form>
-
