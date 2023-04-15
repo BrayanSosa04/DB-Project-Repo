@@ -40,15 +40,9 @@ text-align: center;
         }
     ?>
 </table>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+
 <form action = "deleteAppointmentSucc.php" method = "POST">
+    <br></br>
     <label for = "Patient_ID">Please input your ID:</label>
     <input type = "text" id = "Patient_ID" Patient_ID = "Patient_ID" name = "Patient_ID" maxlength="7">
     <br></br>
