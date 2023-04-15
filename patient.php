@@ -149,7 +149,7 @@ body {
 
           while($rS = mysqli_fetch_array($resultS)){
         ?>  
-            <option value = <?php echo $rS['Employee_ID']; ?>><?php echo $rs['Employee_Name']; ?></option>
+            <option value = "<?php echo $rS['Employee_ID']; ?>"><?php echo $rs['Employee_Name']; ?></option>
         
           <?php
           }
