@@ -10,6 +10,22 @@ text-align: center;
 }
 </style>
 
+<form action = "changeAppointmentSucc.php" method = "POST">
+    <label for = "Patient_ID">Please input your ID:</label>
+    <input type = "text" id = "Patient_ID" Patient_ID = "Patient_ID" name = "Patient_ID" maxlength="7">
+    <br></br>
+    <label for = "Appointment_Time">Please select the appointment date and time you would like to change:</label>
+    <input type = "datetime-local" id = "Appointment_Time" Appointment_Time = "Appointment_Time" name = "Appointment_Time">
+    <br></br>
+    <label for = "Appointment_Time_N">Please select the new appointment date and time:</label>
+    <input type = "datetime-local" id = "Appointment_Time_N" Appointment_Time_N = "Appointment_Time_N" name = "Appointment_Time_N">
+    <br></br>
+    
+    <button type = "submit" name = "submit">Change your Appointment</button>
+
+    <button type = "submit" name = "submit_p" formaction = "patient.php">Return to the main page</button>
+</form>
+
 <table style = "float:left">
     <tr>
     <th>Patient Name</th>
@@ -40,26 +56,3 @@ text-align: center;
         }
     ?>
 </table>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<form action = "changeAppointmentSucc.php" method = "POST">
-    <label for = "Patient_ID">Please input your ID:</label>
-    <input type = "text" id = "Patient_ID" Patient_ID = "Patient_ID" name = "Patient_ID" maxlength="7">
-    <br></br>
-    <label for = "Appointment_Time">Please select the appointment date and time you would like to change:</label>
-    <input type = "datetime-local" id = "Appointment_Time" Appointment_Time = "Appointment_Time" name = "Appointment_Time">
-    <br></br>
-    <label for = "Appointment_Time_N">Please select the new appointment date and time:</label>
-    <input type = "datetime-local" id = "Appointment_Time_N" Appointment_Time_N = "Appointment_Time_N" name = "Appointment_Time_N">
-    <br></br>
-    
-    <button type = "submit" name = "submit">Change your Appointment</button>
-
-    <button type = "submit" name = "submit_p" formaction = "patient.php">Return to the main page</button>
-</form>
