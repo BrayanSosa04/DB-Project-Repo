@@ -41,6 +41,35 @@
     }
   ?>
 </table>
+
+<br></br>
+
+<table>
+  <tr>
+    <th>Employee Name</th>
+    <th>Employee ID</th>
+    <th>Employee Salary</th>
+    <th>Associated Office</th>
+  </tr>
+  <?php 
+    include_once 'connectToTheDB.php';
+    $sql4 = "SELECT p.Employee_Name, p.Employee_ID, p.Salary, p.Asso_Office
+            FROM physician as p, offices as o 
+            WHERE p.Asso_Office = o.OFFICE_ID;";
+    $result4 = mysqli_query($conn, $sql4);
+    $resultcheck4 = mysqli_num_rows($result4);
+
+    if($resultcheck4 > 0){
+      while($row4 = mysqli_fetch_assoc($result4)){
+        echo "<tr><td>" . $row4["Employee_name"] . "</td><td>" . $row4["Employee_ID"] . "</td><td>" . $row4["Salary"] . "</td><td>" . $row4["Asso_office"] . "</td></tr>";
+      }
+    }
+    else{
+      echo "Your mini patient table doesn't work";
+    }
+  ?>
+</table>
+
 <br></br>
 <button type = "submit" name = "submit" >Return to the main page</button>
 </form>
