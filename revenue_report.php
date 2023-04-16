@@ -44,7 +44,7 @@
 
 <br></br>
 
-<table>Employyes Salaries:
+<table>Employee Salaries:
   <tr>
     <th>Employee Name</th>
     <th>Employee ID</th>
