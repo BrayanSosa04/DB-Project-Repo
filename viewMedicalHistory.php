@@ -25,7 +25,7 @@
                            physician.Employee_Name, specialist.Employee_Name, 
                            medical_history.Appointment_Time
                     FROM medical_history, patients, physician, specialist
-                    WHERE medical_history.Patient_ID = '$Patient_ID_VMH' AND patients.Patient_ID = '$Patient_ID_VMH' AND medical_history.Flagged_Delete = 0 AND physician.Employee_ID = medical_history.Asso_Physician AND specialist.Employee_ID = medical_history.Asso_Specialist;";
+                    WHERE medical_history.Patient_ID = '$Patient_ID_VMH' AND patients.Patient_ID = '$Patient_ID_VMH' AND medical_history.Flagged_Delete = 0 AND medical_history.Asso_Physician = physician.Employee_ID AND patients.Physician_ID = medical_history.Asso_Physician AND medical_history.Asso_Specialist = specialist.Employee_ID;";
             $result = mysqli_query ($conn, $sql);
             $resultCheck = mysqli_num_rows($result);
             if ($resultCheck > 0){
