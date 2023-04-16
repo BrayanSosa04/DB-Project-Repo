@@ -13,12 +13,12 @@
     text-align: center;
     }
 </style>
-<table>
+<table>Office Revenue Report:
   <tr>
     <th>Office ID</th>
-    <th>Office Expenditures</th>
+    <th>Office Expenditures(Sum of Salaries)</th>
     <th>Office Budget</th>
-    <th>Revenue Difference</th>
+    <th>Revenue Difference(Office Budget - Office Exp)</th>
   </tr>
   <?php
     include_once 'connectToTheDB.php';
@@ -44,7 +44,7 @@
 
 <br></br>
 
-<table>
+<table>Employyes Salaries:
   <tr>
     <th>Employee Name</th>
     <th>Employee ID</th>
@@ -55,7 +55,8 @@
     include_once 'connectToTheDB.php';
     $sql4 = "SELECT p.Employee_Name as emp_name, p.Employee_ID, p.Salary, p.Asso_Office as aso_off
             FROM physician as p, offices as o 
-            WHERE p.Asso_Office = o.OFFICE_ID;";
+            WHERE p.Asso_Office = o.OFFICE_ID
+            GROUP BY p.Asso_Office;";
     $result4 = mysqli_query($conn, $sql4);
     $resultcheck4 = mysqli_num_rows($result4);
 
