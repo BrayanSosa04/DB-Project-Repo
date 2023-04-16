@@ -2,12 +2,9 @@
     <?php
         require_once 'connectToTheDB.php';
 
-
         // $variable_name = $_method_of_the_form['name_for_the_input']
         $Patient_ID = $_POST['username_pat'];
         $Patient_Pass = $_POST['password_pat'];
-        
-
 
         $result = mysqli_query($conn, "SELECT * FROM user_account WHERE PATIENT_ID = '$Patient_ID'");
         $row = mysqli_fetch_assoc($result);
