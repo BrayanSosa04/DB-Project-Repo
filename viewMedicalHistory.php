@@ -22,16 +22,16 @@
 
             $Patient_ID_VMH = $_GET['Patient_ID_VMH'];
             $sql = "SELECT medical_history.Diagnosis_Test, medical_history.Diagnosis_Results, 
-                           physician.Employee_Name, specialist.Employee_Name, 
+                           medical_history.Asso_Physician, medical_history.Asso_Specialist, 
                            medical_history.Appointment_Time
-                    FROM medical_history, patients, physician, specialist
-                    WHERE medical_history.Patient_ID = '$Patient_ID_VMH' AND patients.Patient_ID = '$Patient_ID_VMH' AND medical_history.Flagged_Delete = 0 AND medical_history.Asso_Physician = physician.Employee_ID AND patients.Physician_ID = medical_history.Asso_Physician AND medical_history.Asso_Specialist = specialist.Employee_ID;";
+                    FROM medical_history, patients
+                    WHERE medical_history.Patient_ID = '$Patient_ID_VMH' AND patients.Patient_ID = '$Patient_ID_VMH' AND medical_history.Flagged_Delete = 0;";
             $result = mysqli_query ($conn, $sql);
             $resultCheck = mysqli_num_rows($result);
             if ($resultCheck > 0){
                 while($row = mysqli_fetch_assoc($result)){
                     echo "<tr><td>" . $row['Diagnosis_Test'] . "</td><td>" . $row['Diagnosis_Results'] . "</td><td>" . 
-                    $row['physician.Employee_Name'] . "</td><td>" . $row['specialist.Employee_Name'] . "</td><td>" . $row['Appointment_Time'] . "</td><td>";
+                    $row['Asso_Physician'] . "</td><td>" . $row['Asso_Specialist'] . "</td><td>" . $row['Appointment_Time'] . "</td><td>";
                 }
             }
             else {
