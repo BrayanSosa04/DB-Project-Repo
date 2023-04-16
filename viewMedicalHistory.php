@@ -31,7 +31,7 @@
             if ($resultCheck > 0){
                 while($row = mysqli_fetch_assoc($result)){
                     echo "<tr><td>" . $row['Diagnosis_Test'] . "</td><td>" . $row['Diagnosis_Results'] . "</td><td>" . 
-                    $row['Asso_Physician'] . "</td><td>" . $row['Asso_Specialist'] . "</td><td>" . $row['Appointment_Time'] . "</td><td>";
+                    $row['physician.Employee_Name'] . "</td><td>" . $row['specialist.Employee_Name'] . "</td><td>" . $row['Appointment_Time'] . "</td><td>";
                 }
             }
             else {
