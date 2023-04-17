@@ -24,7 +24,7 @@
     include_once 'connectToTheDB.php';
 
     $sql3 = "SELECT *
-            FROM Company_Expenditures
+            FROM company_expenditures
             WHERE Office_Difference <= 0;";
     $result3 = mysqli_query($conn, $sql3);
     $resultCheck3 = mysqli_num_rows($result3);
