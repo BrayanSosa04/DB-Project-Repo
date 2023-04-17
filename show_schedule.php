@@ -22,8 +22,8 @@ text-align: center;
     $SVinput = $_GET['SVinput'];
     $SV_DT = $_GET['SV_DT'];
 
-      $sql = "SELECT Appointment_Time, appointments.Patient_Name, appointments.Office_Address, Department_Name 
-              FROM offices, appointments, departments 
+      $sql = "SELECT Appointment_Time, appointments.Patient_Name, appointments.Office_Address
+              FROM offices, appointments
               WHERE appointments.Specialist_ID = '$SVinput' AND appointments.Appointment_Time >= '$SV_DT' AND 
                     appointments.Office_Address = offices.ADDRESS AND appointments.Flagged_Delete = 0
               ORDER BY Appointment_Time;";
@@ -32,7 +32,7 @@ text-align: center;
 
      if($resultCheck > 0) {
       while($row = mysqli_fetch_assoc($result)) {
-        echo "<tr><td>" . $row["Appointment_Time"] . "</td><td>" . $row["Patient_Name"] . "</td><td>" . $row["Office_Address"] . "</td><td>" . $row["Department_Name"] . "</td></tr>";
+        echo "<tr><td>" . $row["Appointment_Time"] . "</td><td>" . $row["Patient_Name"] . "</td><td>" . $row["Office_Address"] . "</td></tr>";
       }
       } else {
         echo "No Schedule found";
