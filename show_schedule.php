@@ -14,7 +14,6 @@ text-align: center;
     <th>Date</th>
     <th>Patient Name</th>
     <th>Office Location</th>
-    <th>Department</th>
   </tr>
   <?php
     include_once 'connectToTheDB.php';
