@@ -27,6 +27,12 @@
       <input type = "text" id = "OSVinput2" OSVinput = "OSVinput2" name = "OSVinput2">
       <button type = "submit" id = "OSVsubmit" name = "OSVsubmit">View Office Report</button>
     </form>
+    <form action = "office_create.php" method = "GET">
+      <button type = "submit" id = "OSVcreate" name = "OSVcreate">Add Office</button>
+    </form>
+    <!--<form action = "office_update.php" method = "GET">
+      <button type = "submit" id = "OSVupdate" name = "OSVupdate"> Update Office</button>
+    </form>-->
   </section>
 
   <section id="DSV">
@@ -46,15 +52,12 @@
     <form action = "revenue_report.php" method = "GET">
       <label for = "RSVinput">Revenue:</label>
       <input type = "text" id = "RSVinput" RSVinput = "RSVinput" name = "RSVinput">
-      <br></br>
       <button type = "submit" id = "RSVsubmit" name = "RSVsubmit">View Revenue Report</button>
     </form>
     <form action = "revenue_report2.php" method = "GET">
       <button type = "submit" id = "RSVsubmit2" name = "RSVsubmit2">Overbudget Offices</button>
     </form>
   </section>
-
-  <button onclick = "location.replace('Login.php');">Log out</button>
 </body>
 
 <footer>
