@@ -1,4 +1,4 @@
-<form action = "Doc.php">
+
 <style>
 table, th, td {
 border: 2px solid rgb(2, 2, 2);
@@ -37,5 +37,6 @@ text-align: center;
   ?>
 </table>
 <br></br>
+<form action = "Doc.php">
 <button type = "submit" name = "submit" >Return to the main page</button>
 </form>
