@@ -27,7 +27,7 @@
     $OSVinput2 = $_GET['OSVinput2'];
     $sql = "SELECT * 
             FROM office_info
-            WHERE Number_Of_Departments >= '$OSVinput' AND Number_Of_Specialist >= '$OSVinput2';";
+            WHERE Number_Of_Departments > '$OSVinput' AND Number_Of_Specialist > '$OSVinput2';";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
 
