@@ -92,7 +92,7 @@ body {
   <form action = "changeAppointment.php" method = "GET">
     <label for = "Patient_ID_RA">Please input your ID:</label>
     <input type = "text" id = "Patient_ID_RA" Patient_ID_RA = "Patient_ID_RA" name = "Patient_ID_RA" maxlength="7">
-    <button type = "submit" name = "submit" >View Appointment</button>
+    <button type = "submit" name = "submit" >View Appointment to Re-schedule</button>
   </form>
   </div>
 
@@ -100,7 +100,7 @@ body {
   <form action = "deleteAppointment.php" method = "GET">
     <label for = "Patient_ID_DA">Please input your ID:</label>
     <input type = "text" id = "Patient_ID_DA" Patient_ID_DA = "Patient_ID_DA" name = "Patient_ID_DA" maxlength="7">
-    <button type = "submit" name = "submit" >View Appointment</button>
+    <button type = "submit" name = "submit" >View Appointment to Delete</button>
   </form>
   </div>
 
@@ -215,7 +215,7 @@ body {
     <form action = "viewMedicalHistory.php" method = "GET">
       <label for = "Patient_ID_VMH">Please input your ID:</label>
       <input type = "text" id = "Patient_ID_VMH" Patient_ID_VMH = "Patient_ID_VMH" name = "Patient_ID_VMH" maxlength="7">
-      <button type = "submit" name = "submit" >View Appointment</button>
+      <button type = "submit" name = "submit" >View Medical History</button>
     </form>
   </div>
   <br></br>
