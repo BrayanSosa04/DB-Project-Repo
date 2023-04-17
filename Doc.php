@@ -43,7 +43,21 @@
     <h2 id="inventory">Inventory</h2>
     <form action = "show_inv.php" method = "GET">
       <label for = "IVinput">Please input the name to see its inventory:</label>
-      <input type = "text" id = "IVinput" IVinput = "IVinput" name = "IVinput">
+      <select id = "IVinput" IVinput = "IVinput" name = "IVinput">
+      <?php 
+            include_once 'connectToTheDB.php';
+
+            $sqlI = "SELECT * FROM inventory;";
+            $resultI =  mysqli_query($conn, $sqlI);
+
+            while($rI = mysqli_fetch_array($resultI)){
+          ?>
+              <option value = "<?php echo $rI['Inventory_Name']; ?>"><?php echo $rI['Inventory_Name']; ?></option>
+          <?php
+            }
+          ?>
+      </select>
+      <br></br>
       <button type = "submit" id = "IVsubmit" name = "IVsubmit">View Inventory </button>
     </form>
   </section>
