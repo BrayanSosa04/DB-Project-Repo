@@ -29,7 +29,7 @@ text-align: center;
 
     if($resultCheck2 > 0) {
       while($row2 = mysqli_fetch_assoc($result2)) {
-        echo "<tr><td>" . $row2["Patient_ID"] . "</td><td>" . $row2["Patient_Name"] . "</td><td>" . $row2["Diagnosis_Test"] . "</td><td>"  . $row2["Diagnosis_Results"] . "</td><td>" . $row2["Last_Modified_Date"] . "</td></tr";
+        echo "<tr><td>" . $row2["Patient_ID"] . "</td><td>" . $row2["Patient_Name"] . "</td><td>" . $row2["Diagnosis_Test"] . "</td><td>"  . $row2["Diagnosis_Results"] . "</td><td>" . $row2["Last_Modified_Date"] . "</td></tr>";
       }
     } else {
       echo "No Patients found";
