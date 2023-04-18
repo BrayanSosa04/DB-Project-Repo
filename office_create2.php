@@ -8,10 +8,10 @@
 <?php
   include_once 'connectToTheDB.php';
 
-  $OSVCOffice_ID = $_GET['OSVCOffice_ID'];
-  $OSVCAddress = $_GET['OSVCAddress'];
-  $OSVCDate = $_GET['OSVCDate'];
-  $OSVCBudget = $_GET['OSVCBudget'];
+  $OSVCOffice_ID = $_POST['OSVCOffice_ID'];
+  $OSVCAddress = $_POST['OSVCAddress'];
+  $OSVCDate = $_POST['OSVCDate'];
+  $OSVCBudget = $_POST['OSVCBudget'];
 
   $sql = "INSERT INTO offices(OFFICE_ID, `ADDRESS`, DATE_ESTABLISHED, BUDGET, Flagged_Delete)
   VALUES ('$OSVCOffice_ID', '$OSVCAddress', '$OSVCDate', $OSVCBudget, 0);";
