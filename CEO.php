@@ -47,7 +47,7 @@
       
       <br></br>
       <button type = "submit" name = "submit_s" formaction = "createSpecialist.php">Add New Specialist</button><br></br>
-      <button type = "submit" name = "submit_s" formaction = "createPhysician.php">Add New Physician, this doesnt do anything yet</button>
+      <button type = "submit" name = "submit_s" formaction = "createPhysician.php">Add New Physician</button>
       </form>
   </section>
 

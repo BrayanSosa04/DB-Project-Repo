@@ -17,10 +17,10 @@
 
   <section id = "DeptCOverview">
     <form action = "department_create2.php" method = "POST">
-      <label for = "DeptCName">Name:</label>
+      <label for = "DeptCName">Dept Name:</label>
       <input type = "text" id = "DeptCName" DeptCName = "DeptCName" name = "DeptCName">
 
-      <label for = "DeptCOffice">Office:</label>
+      <label for = "DeptCOffice">Associated Office:</label>
       <select id = "DeptCOffice" DeptCOffice = "DeptCOffice" name = "DeptCOffice">
         <?php
             include_once 'connectToTheDB.php';
@@ -54,7 +54,7 @@
       </select>
 
       <label for = "DeptCModifiedBy">Enter Your ID:</label>
-      <input type = "text" id = "DeptCModifiedBy" DeptCModifiedBy = "DeptCModifiedBy" name = "DeptCModifiedBy">
+      <input type = "text" id = "DeptCModifiedBy" DeptCModifiedBy = "DeptCModifiedBy" name = "DeptCModifiedBy" placeholder = "BM100">
 
       <br></br>
       <button type = "submit" name = "submit">Add Department</button>
