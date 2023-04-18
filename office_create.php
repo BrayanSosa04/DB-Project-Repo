@@ -28,7 +28,8 @@
 
       <label for = "OSVCBudget">Budget Allocation:</label>
       <input type = "number" id = "OSVCBudget" OSVCBudget = "OSVCBudget" name = "OSVCBudget">
-
+      
+      <br></br>
       <button type = "submit"  name = "submit">Add Office</button>
       <button type = "submit" name = "submit_c" formaction = "CEO.php">Return to CEO page</button>
     </form>

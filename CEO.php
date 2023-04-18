@@ -26,10 +26,9 @@
       <label for = "OSVinput2"># of Specialists:</label>
       <input type = "text" id = "OSVinput2" OSVinput = "OSVinput2" name = "OSVinput2">
       <button type = "submit" id = "OSVsubmit" name = "OSVsubmit">View Office Report</button>
+      <button type = "submit" id = "OSVcreate" name = "OSVcreate" formaction = "office_create.php">Add Office</button>
     </form>
-    <form action = "office_create.php" method = "GET">
-      <button type = "submit" id = "OSVcreate" name = "OSVcreate">Add Office</button>
-    </form>
+    
     <!--<form action = "office_update.php" method = "GET">
       <button type = "submit" id = "OSVupdate" name = "OSVupdate"> Update Office</button>
     </form>-->
