@@ -18,10 +18,10 @@
   <section id = "OSVCOverview">
     <form action = "office_create2.php" method = "POST">
       <label for = "OSVCOffice_ID">Office ID:</label>
-      <input type = "text" id = "OSVCOffice_ID" OSVCOffice_ID = "OSVCOffice_ID" name = "OSVCOffice_ID">
+      <input type = "text" id = "OSVCOffice_ID" OSVCOffice_ID = "OSVCOffice_ID" name = "OSVCOffice_ID" maxlength = "1">
 
       <label for = "OSVCAddress">Address:</label>
-      <input type = "text" id = "OSVCAddress" OSVCAddress = "OSVCAddress" name = "OSVCAddress">
+      <input type = "text" id = "OSVCAddress" OSVCAddress = "OSVCAddress" name = "OSVCAddress" maxlength = "40">
 
       <label for = "OSVCDate">Date Estabished:</label>
       <input type = "date" id = "OSVCDate" OSVCDate = "OSVCDate" name = "OSVCDate">

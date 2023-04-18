@@ -91,11 +91,25 @@
     <input type = "number" id = "Spec_YHD" Spec_YHD = "Spec_YHD" name = "Spec_YHD">
 
     <label for = "Spec_supID">Supervisor ID:</label>
-    <input type = "text" id = "Spec_supID" Spec_supID = "Spec_supID" name = "Spec_supID" maxlength = "7" placeholder = "No longer than 7 char">
+    <select id = "Spec_supID" Spec_supID = "Spec_supID" name = "Spec_supID">
+        <?php 
+             include_once 'connectToTheDB.php';
+
+             $sqlSup = "SELECT * FROM specialist WHERE Supervisor_ID IS NULL;";
+             $resultSup = mysqli_query($conn, $sqlSup);
+
+             while($rSup = mysqli_fetch_array($resultSup)){
+        ?>
+        <option value = "<?php echo $rSup['Employee_ID'];?>"><?php echo $rSup['Employee_Name'];?></option>
+
+        <?php
+             }
+        ?>
+    </select>
 
     <label for = "Spec_TD">Today's Date:</label>
     <input type = "date" id = "Spec_TD" Spec_TD = "Spec_TD" name = "Spec_TD">
     <br></br>
-    <button type = "submit" name = "submit" >Finish Registering Specilist</button>
+    <button type = "submit" name = "submit" >Finish Registering Specialist</button>
     <button type = "submit" name = "submit_s" formaction="CEO.php">Return to main page</button>
   </form>
