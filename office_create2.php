@@ -1,4 +1,3 @@
-<form action = "office_create.php">
 <style>
   body {
     background-color: lightgray;
@@ -24,6 +23,8 @@
     echo 'Office Creation Failed';
   }
 ?>
-<button type = "submit" name = "submit">Return to CEO page</button>
-</body>
+<form action = "office_create.php">
+    <button type = "submit" name = "submit">Return to CEO page</button>
 </form>
+</body>
+

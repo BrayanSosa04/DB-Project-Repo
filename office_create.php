@@ -1,4 +1,3 @@
-<form action = "CEO.php">
 <style>
     body {
       background-color: lightgray;
@@ -30,10 +29,8 @@
       <label for = "OSVCBudget">Budget Allocation:</label>
       <input type = "number" id = "OSVCBudget" OSVCBudget = "OSVCBudget" name = "OSVCBudget">
 
-      <button type = "submit" id = "OSVCsubmit" name = "submit">Add Office</button>
+      <button type = "submit"  name = "submit">Add Office</button>
+      <button type = "submit" name = "submit_c" formaction = "CEO.php">Return to CEO page</button>
     </form>
   </section>
 </body>
-
-<button type = "submit" name = "submit">Return to CEO page</button>
-</form>
