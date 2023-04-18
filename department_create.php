@@ -25,7 +25,7 @@
         <?php
             include_once 'connectToTheDB.php';
 
-            $sqlO = "SELECT * FROM offices;";
+            $sqlO = "SELECT * FROM offices WHERE Flagged_Delete = 0;";
             $resultO = mysqli_query($conn, $sqlO);
     
             while($rO = mysqli_fetch_array($resultO)){
@@ -41,7 +41,7 @@
       <?php 
           include_once 'connectToTheDB.php';
 
-          $sqlS = "SELECT * FROM specialist;";
+          $sqlS = "SELECT * FROM specialist WHERE Flagged_Delete = 0;";
           $resultS = mysqli_query($conn, $sqlS);
 
           while($rS = mysqli_fetch_array($resultS)){

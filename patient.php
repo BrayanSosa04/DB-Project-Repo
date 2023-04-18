@@ -126,7 +126,7 @@ body {
       <?php 
         include_once 'connectToTheDB.php';
 
-        $sqlO = "SELECT * FROM offices;";
+        $sqlO = "SELECT * FROM offices WHERE Flagged_Delete = 0;";
         $resultO = mysqli_query($conn, $sqlO);
 
         while($rO = mysqli_fetch_array($resultO)){
@@ -150,7 +150,7 @@ body {
       <?php 
         include_once 'connectToTheDB.php';
 
-        $sqlPYes = "SELECT * FROM physician;";
+        $sqlPYes = "SELECT * FROM physician WHERE Flagged_Delete = 0;";
         $resultPYes =  mysqli_query($conn, $sqlPYes);
 
         while($rPYes = mysqli_fetch_array($resultPYes)){
@@ -167,7 +167,7 @@ body {
         <?php 
           include_once 'connectToTheDB.php';
 
-          $sqlS = "SELECT * FROM specialist;";
+          $sqlS = "SELECT * FROM specialist WHERE Flagged_Delete = 0;";
           $resultS = mysqli_query($conn, $sqlS);
 
           while($rS = mysqli_fetch_array($resultS)){
@@ -186,7 +186,7 @@ body {
           <?php 
             include_once 'connectToTheDB.php';
 
-            $sqlPNo = "SELECT * FROM physician;";
+            $sqlPNo = "SELECT * FROM physician WHERE Flagged_Delete = 0;";
             $resultPNo =  mysqli_query($conn, $sqlPNo);
 
             while($rPNo = mysqli_fetch_array($resultPNo)){

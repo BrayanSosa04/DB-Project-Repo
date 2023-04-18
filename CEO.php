@@ -46,8 +46,12 @@
       <button type = "submit" id = "DSVsubmit" name = "DSVsubmit">View Doctor Report</button>
       
       <br></br>
-      <button type = "submit" name = "submit_s" formaction = "createSpecialist.php">Add New Specialist</button><br></br>
-      <button type = "submit" name = "submit_s" formaction = "createPhysician.php">Add New Physician</button>
+      <button type = "submit" name = "submit_s" formaction = "createSpecialist.php">Add New Specialist</button>
+      <button type = "submit" name = "submit_sc" formaction = "changeSpecialist.php">Modify Existing Specialist, working on it</button>
+      <button type = "submit" name = "submit_sd" formaction = "deleteSpecialist.php">Delete Existing Specialist, working on it</button><br></br>
+      <button type = "submit" name = "submit_p" formaction = "createPhysician.php">Add New Physician</button>
+      <button type = "submit" name = "submit_pc" formaction = "changePhysician.php">Modify Existing Physician, working on it</button>
+      <button type = "submit" name = "submit_pd" formaction = "deletePhysician.php">Delete Existing Physician, working on it</button>
       </form>
   </section>
 

@@ -24,7 +24,7 @@ text-align: center;
       $sql = "SELECT Appointment_Time, appointments.Patient_Name, appointments.Office_Address
               FROM offices, appointments
               WHERE appointments.Specialist_ID = '$SVinput' AND appointments.Appointment_Time >= '$SV_DT' AND 
-                    appointments.Office_Address = offices.ADDRESS AND appointments.Flagged_Delete = 0
+                    appointments.Office_Address = offices.ADDRESS AND appointments.Flagged_Delete = 0 AND offices.Flagged_Delete = 0
               ORDER BY Appointment_Time;";
   $result = mysqli_query($conn, $sql);
   $resultCheck = mysqli_num_rows($result);

@@ -47,7 +47,7 @@
       <?php 
             include_once 'connectToTheDB.php';
 
-            $sqlI = "SELECT * FROM inventory;";
+            $sqlI = "SELECT * FROM inventory WHERE Flagged_Delete = 0;";
             $resultI =  mysqli_query($conn, $sqlI);
 
             while($rI = mysqli_fetch_array($resultI)){

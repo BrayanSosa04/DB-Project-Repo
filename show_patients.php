@@ -23,7 +23,7 @@ text-align: center;
     $PVinput = $_GET['PVinput'];
       $sql2 = "SELECT Patient_ID, Patient_Name, Diagnosis_Test, Diagnosis_Results, Last_Modified_Date
                FROM medical_history AS MH
-               WHERE Patient_ID = '$PVinput';";
+               WHERE Patient_ID = '$PVinput' AND MH.Flagged_Delete = 0;";
     $result2 = mysqli_query($conn, $sql2);
     $resultCheck2 = mysqli_num_rows($result2);
 
