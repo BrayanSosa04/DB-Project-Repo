@@ -61,6 +61,8 @@
       <button type = "submit" id = "RSVsubmit2" name = "RSVsubmit2">Overbudget Offices</button>
     </form>
   </section>
+
+  <button onclick = "location.replace('Login.php');">Log out</button>
 </body>
 
 <footer>
