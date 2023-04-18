@@ -84,7 +84,18 @@
     <input type = "date" id = "Spec_DFE" Spec_DFE = "Spec_DFE" name = "Spec_DFE">
     <br></br>
 
+    <label for = "Spec_YID">Years in Department: </label>
+    <input type = "number" id = "Spec_YID" Spec_YID = "Spec_YID" name = "Spec_YID">
 
-    
+    <label for = "Spec_YHD">Years as Head of Department: </label>
+    <input type = "number" id = "Spec_YHD" Spec_YHD = "Spec_YHD" name = "Spec_YHD">
 
+    <label for = "Spec_supID">Supervisor ID:</label>
+    <input type = "text" id = "Spec_supID" Spec_supID = "Spec_supID" name = "Spec_supID" maxlength = "7" placeholder = "No longer than 7 char">
+
+    <label for = "Spec_TD">Today's Date:</label>
+    <input type = "date" id = "Spec_TD" Spec_TD = "Spec_TD" name = "Spec_TD">
+
+    <button type = "submit" name = "submit" >Finish Registering Specilist</button>
+    <button type = "submit" name = "submit_s" formaction="CEO.php">Return to main page</button>
   </form>
