@@ -23,7 +23,7 @@
     echo 'Office Creation Failed';
   }
 ?>
-<form action = "office_create.php">
+<form action = "CEO.php">
     <button type = "submit" name = "submit">Return to CEO page</button>
 </form>
 </body>
