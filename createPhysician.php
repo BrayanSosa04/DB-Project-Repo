@@ -66,20 +66,20 @@
 
     <label for = "Phy_DOB">Date of Birth:</label>
     <input type = "date" id = "Phy_DOB" Phy_DOB = "Phy_DOB" name = "Phy_DOB">
+    <br></br>
 
     <label for = "Phy_Ava">Availability: </label>
     <input type = "text" id = "Phy_Ava" Phy_Ava = "Phy_Ava" name = "Phy_Ava" placeholder = "Mon-Fri 8:00 AM - 5:00 PM " maxlength = "1000">
-    <br></br>
 
     <label for = "Phy_em">Physician Email: </label>
     <input type = "text" id = "Phy_em" Phy_em = "Phy_em" name = "Phy_em" placeholder = "john@gmail.com" maxlength = "1000">
 
     <label for = "Phy_num">Physician Phone Number: </label>
     <input type = "text" id = "Phy_num" Phy_num = "Phy_num" name = "Phy_num" placeholder = "XXXXXXXXXX" maxlength = "10">
+    <br></br>
 
     <label for = "Phy_DFE">Date First Employed:</label>
     <input type = "date" id = "Phy_DFE" Phy_DFE = "Phy_DFE" name = "Phy_DFE">
-    <br></br>
 
     <label for = "Phy_Sal">Physician Salary: </label>
     <input type = "number" id = "Phy_Sal" Phy_Sal = "Phy_Sal" name = "Phy_Sal">
@@ -90,3 +90,4 @@
     <button type = "submit" name = "submit" >Finish Registering Specialist</button>
     <button type = "submit" name = "submit_s" formaction="CEO.php">Return to main page</button>
   </form>
+</body>
