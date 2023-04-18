@@ -14,7 +14,7 @@
 
 <body>
   <h1>Add a Specialist</h1>
-  <form action = "createSpecialistSucc.php">
+  <form action = "createSpecialistSucc.php" method = "POST">
     <label for = "Spec_ID">Specialist ID:</label>
     <input type = "text" id = "Spec_ID" Spec_ID = "Spec_ID" name = "Spec_ID" maxlength = "7" placeholder = "No longer than 7 char">
 
@@ -95,7 +95,7 @@
 
     <label for = "Spec_TD">Today's Date:</label>
     <input type = "date" id = "Spec_TD" Spec_TD = "Spec_TD" name = "Spec_TD">
-
+    <br></br>
     <button type = "submit" name = "submit" >Finish Registering Specilist</button>
     <button type = "submit" name = "submit_s" formaction="CEO.php">Return to main page</button>
   </form>
