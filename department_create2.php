@@ -18,7 +18,10 @@
   VALUES ('$DeptCName', '$DeptCOffice', '$DeptCSpecialist', '$Date_Created', '$Last_Modified_Date', '$Last_Modified_By', 0);";
   $result = mysqli_query($conn, $sql);
 
-  if($result) {
+  $sql2 = "UPDATE specialist SET Supervisor_ID = NULL WHERE Employee_ID = '$DeptCSpecialist';";
+  $result2 = mysqli_query($conn, $sql2);
+
+  if($result && $result2) {
     echo 'New Department Created!';
   } else {
     echo 'Department Creaton Failed';

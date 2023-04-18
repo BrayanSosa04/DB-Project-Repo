@@ -21,10 +21,37 @@
       <input type = "text" id = "DeptCName" DeptCName = "DeptCName" name = "DeptCName">
 
       <label for = "DeptCOffice">Office:</label>
-      <input type = "text" id = "DeptCOffice" DeptCOffice = "DeptCOffice" name = "DeptCOffice">
+      <select id = "DeptCOffice" DeptCOffice = "DeptCOffice" name = "DeptCOffice">
+        <?php
+            include_once 'connectToTheDB.php';
+
+            $sqlO = "SELECT * FROM offices;";
+            $resultO = mysqli_query($conn, $sqlO);
+    
+            while($rO = mysqli_fetch_array($resultO)){
+          ?>
+              <option value= "<?php echo $rO['OFFICE_ID']?>"><?php echo $rO['ADDRESS']?></option>
+          <?php
+            }
+          ?>
+      </select>
 
       <label for = "DeptCSpecialist">Head Specialist:</label>
-      <input type = "text" id = "DeptCSpecialist" DeptCSpecialist = "DeptCSpecialist" name = "DeptCSpecialist">
+      <select id = "DeptCSpecialist" DeptCSpecialist = "DeptCSpecialist" name = "DeptCSpecialist">
+      <?php 
+          include_once 'connectToTheDB.php';
+
+          $sqlS = "SELECT * FROM specialist;";
+          $resultS = mysqli_query($conn, $sqlS);
+
+          while($rS = mysqli_fetch_array($resultS)){
+        ?>  
+            <option value = "<?php echo $rS['Employee_ID']; ?>"><?php echo $rS['Employee_Name']; ?></option>
+        
+          <?php
+          }
+          ?>
+      </select>
 
       <label for = "DeptCModifiedBy">Enter Your ID:</label>
       <input type = "text" id = "DeptCModifiedBy" DeptCModifiedBy = "DeptCModifiedBy" name = "DeptCModifiedBy">
