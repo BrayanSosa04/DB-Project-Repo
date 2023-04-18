@@ -30,7 +30,7 @@
       <label for = "OSVCBudget">Budget Allocation:</label>
       <input type = "number" id = "OSVCBudget" OSVCBudget = "OSVCBudget" name = "OSVCBudget">
 
-      <button type = "submit" id = "OSVCsubmit" name = "OSVCsubmit">Add Office</button>
+      <button type = "submit" id = "OSVCsubmit" name = "submit">Add Office</button>
     </form>
   </section>
 </body>

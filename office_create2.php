@@ -26,8 +26,4 @@
 ?>
 <button type = "submit" name = "submit">Return to CEO page</button>
 </body>
-<<<<<<< HEAD
 </form>
-=======
-</form>
->>>>>>> ca5d93f73405b8f0dd21d2422adcb3159a9f5e33
