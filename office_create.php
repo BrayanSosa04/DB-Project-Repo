@@ -28,7 +28,7 @@
       <input type = "date" id = "OSVCDate" OSVCDate = "OSVCDate" name = "OSVCDate">
 
       <label for = "OSVCBudget">Budget Allocation:</label>
-      <input type = "text" id = "OSVCBudget" OSVCBudget = "OSVCBudget" name = "OSVCBudget">
+      <input type = "number" id = "OSVCBudget" OSVCBudget = "OSVCBudget" name = "OSVCBudget">
 
       <button type = "submit" id = "OSVCsubmit" name = "OSVCsubmit">Add Office</button>
     </form>
