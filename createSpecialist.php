@@ -39,5 +39,36 @@
     </select>
 
     <br></br>
-    
+
+    <label for = "Spec_Dept">Specialist's Associated Department:</label>
+    <select id = "Spec_Dept" Spec_Dept = "Spec_Dept" name = "Spec_Dept">
+        <?php 
+            include_once 'connectToTheDB.php';
+
+            $sqlDept = "SELECT * FROM departments;";
+            $resultDept = mysqli_query($conn, $sqlDept);
+
+            while($rDept = mysqli_fetch_array($resultDept)){
+
+        ?>
+        <option value = "<?php echo $rDept['Department_Name'];?>"><?php echo $rDept['Department_Name'];?></option>
+        <?php
+            }
+        ?>
+    </select>
+
+    <label for = "Spec_Sex">Sex: </label>
+    <select id = "Spec_Sex" Spec_Sex = "Spec_Sex" name = "Spec_Sex">
+        <option value = "M">Male</option>
+        <option value = "F">Female</option>
+        <option value = "O">Other</option>
+    </select>
+
+    <label for = "Spec_DOB">Date of Birth:</label>
+    <input type = "date" id = "Spec_DOB" Spec_DOB = "Spec_DOB" name = "Spec_DOB">
+
+    <label for = "Spec_Ava">Availability: </label>
+    <input type = "text" id = "Spec_Ava" Spec_Ava = "Spec_Ava" name = "Spec_Ava" placeholder = "Mon-Fri 8:00 AM - 5:00 PM " maxlength = "1000">
+    <br></br>
+
   </form>
