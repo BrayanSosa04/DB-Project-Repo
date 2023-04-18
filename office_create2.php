@@ -13,8 +13,8 @@
   $OSVCDate = $_GET['OSVCDate'];
   $OSVCBudget = $_GET['OSVCBudget'];
 
-  $sql = "INSERT INTO offices(Office_ID, Address, Date_Established, Budget)
-  VALUES ('$OSVCOffice_ID', '$OSVCAddress', '$OSVCDate', '$OSVCBudget');";
+  $sql = "INSERT INTO offices(OFFICE_ID, `ADDRESS`, DATE_ESTABLISHED, BUDGET, Flagged_Delete)
+  VALUES ('$OSVCOffice_ID', '$OSVCAddress', '$OSVCDate', $OSVCBudget, 0);";
   $result = mysqli_query($conn, $sql);
 
   if($result) {
