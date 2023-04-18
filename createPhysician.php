@@ -87,7 +87,7 @@
     <label for = "Phy_TD">Today's Date:</label>
     <input type = "date" id = "Phy_TD" Phy_TD = "Phy_TD" name = "Phy_TD">
     <br></br>
-    <button type = "submit" name = "submit" >Finish Registering Specialist</button>
+    <button type = "submit" name = "submit" >Finish Registering Physician</button>
     <button type = "submit" name = "submit_s" formaction="CEO.php">Return to main page</button>
   </form>
 </body>
