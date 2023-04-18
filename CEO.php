@@ -43,9 +43,10 @@
       <label for = "DSVinput2">Office ID:</label>
       <input type = "text" id = "DSVinput2" DSVinput = "DSVinput2" name = "DSVinput2">
       <button type = "submit" id = "DSVsubmit" name = "DSVsubmit">View Doctor Report</button>
-
+      
+      <br></br>
       <button type = "submit" name = "submit_s" formaction = "createSpecialist.php">Add New Specialist</button><br></br>
-      <button type = "submit" name = "submit_s" formaction = "createPhysician.php">Add New Physician, this doesnt do anything yet></button>
+      <button type = "submit" name = "submit_s" formaction = "createPhysician.php">Add New Physician, this doesnt do anything yet</button>
       </form>
   </section>
 
