@@ -25,7 +25,7 @@
       <input type = "text" id = "OSVCAddress" OSVCAddress = "OSVCAddress" name = "OSVCAddress">
 
       <label for = "OSVCDate">Date Estabished:</label>
-      <input type = "text" id = "OSVCDate" OSVCDate = "OSVCDate" name = "OSVCDate">
+      <input type = "date" id = "OSVCDate" OSVCDate = "OSVCDate" name = "OSVCDate">
 
       <label for = "OSVCBudget">Budget Allocation:</label>
       <input type = "text" id = "OSVCBudget" OSVCBudget = "OSVCBudget" name = "OSVCBudget">
