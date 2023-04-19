@@ -77,7 +77,7 @@
 
 <br></br>
 
-<table>List of All Specialists
+<table>List of All Specialists:
   <tr>
     <th>Specialist Name</th>
     <th>Specialist ID</th>
