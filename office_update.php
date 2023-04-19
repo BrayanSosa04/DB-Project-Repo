@@ -21,7 +21,7 @@
       <?php 
             include_once 'connectToTheDB.php';
 
-            $sqlOff = "SELECT * FROM offices;";
+            $sqlOff = "SELECT * FROM offices WHERE Flagged_Delete = 0;";
             $resultOff = mysqli_query($conn, $sqlOff);
 
             while($rOff = mysqli_fetch_array($resultOff)){
