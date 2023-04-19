@@ -24,21 +24,17 @@
 
   <section id = "DeptUpdateOverview">
     <form action = "department_update2.php" method = "POST">
-      <label for = "DeptUeName">Name:</label>
-      <input type = "text" id = "DeptUName" DeptUpdateName = "DeptUName" name = "DeptUName">
-
-      <label for = "DeptUOffice">Office:</label>
-      <select id = "DeptUOffice" DeptUOffice = "DeptUOffice" name = "DeptUOffice">
-        <?php 
+      <label for = "DeptUeName">Department Name:</label>
+      <select id = "DeptUName" DeptUpdateName = "DeptUName" name = "DeptUName">
+        <?php
             include_once 'connectToTheDB.php';
 
-            $sqlOff = "SELECT * FROM offices WHERE Flagged_Delete = 0;";
-            $resultOff = mysqli_query($conn, $sqlOff);
+            $sqld = "SELECT * FROM departments WHERE Flagged_Delete = 0;";
+            $resultd = mysqli_query($conn, $sqld);
 
-            while($rOff = mysqli_fetch_array($resultOff)){
-
+            while($rd = mysqli_fetch_array($resultd)){
         ?>
-        <option value = "<?php echo $rOff['OFFICE_ID'];?>"><?php echo $rOff['ADDRESS'];?></option>
+        <option value = "<?php echo $rd['Department_Name'];?>"><?php echo $rd['Department_Name'];?></option>
         <?php
             }
         ?>

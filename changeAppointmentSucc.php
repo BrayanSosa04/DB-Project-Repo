@@ -4,9 +4,10 @@
     $Patient_ID = $_POST['Patient_ID'];
     $Appointment_Time = $_POST['Appointment_Time'];
     $Appointment_Time_N = $_POST['Appointment_Time_N'];
+    $Modified_Date = date('Y-m-d');
 
     $sql = "UPDATE appointments
-            SET appointments.Appointment_Time = '$Appointment_Time_N'
+            SET appointments.Appointment_Time = '$Appointment_Time_N', appointments.Last_Modified_Date = '$Modified_Date', appointments.Last_Modified_By = '$Patient_ID'
             WHERE appointments.Appointment_Time = '$Appointment_Time' AND appointments.Flagged_Delete = 0;";
     $result = mysqli_query($conn, $sql);
 
