@@ -74,5 +74,37 @@
 
   ?>
 </table>
+
+<br></br>
+
+<table>List of All Specialists
+  <tr>
+    <th>Specialist Name</th>
+    <th>Specialist ID</th>
+    <th>Specialist Practice</th>
+    <th>Specialist's Associated Office</th>
+    <th>Date of Employment</th>
+  </tr>
+  <?php
+    include_once 'connectToTheDB.php';
+
+    $sqlS = "SELECT s.Employee_Name as sname, s.Employee_ID as spID, s.Specialist_Practice as sprac, s.Asso_Office as soff, s.Date_First_Employed as sdfe
+             FROM specialist as s, offices as o
+             WHERE s.OFFICE_ID = s.Asso_Office
+             ORDER BY s.Asso_Office;";
+
+    $resultS = mysqli_query($conn, $sqlS);
+    $resultSCheck = mysqli_num_rows($resultS);
+
+    if($resultSCheck > 0){
+      while($rS = mysqli_fetch_assoc($resultS)){
+        echo "<tr><td>" . $rS['sname'] . "</td><td>" . $rS['spID'] . "</td><td>" . $rS['sprac'] . "</td><td>" . $rS['soff'] . "</td><td>" . $rS['sdfe'] . "</td></tr>";
+      }
+    }
+    else{
+      echo "No Specialist Table Available";
+    }
+  ?>
+</table>
 <button type = "submit" name = "submit" >Return to the main page</button>
 </form>
