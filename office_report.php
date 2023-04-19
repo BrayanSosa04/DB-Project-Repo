@@ -59,12 +59,12 @@
              FROM departments as d, offices as o
              WHERE d.Asso_Office = o.OFFICE_ID;";
 
-    $resultD = mysqli_query($conn,  $sqlD);
+    $resultD = mysqli_query($conn, $sqlD);
     $resultDCheck = mysqli_num_rows($resultD);
 
     if($resultDCheck > 0){
       while($rD = mysqli_fetch_assoc($resultD)){
-        echo "<tr><td>" . $rowD['dname'] . "</td><td>" . $rowD['hs'] . "</td><td>" . $rowD['ao'] . "</td><td>" . $rowD['dc'] . "</td></tr>";
+        echo "<tr><td>" . $rD['dname'] . "</td><td>" . $rD['hs'] . "</td><td>" . $rD['ao'] . "</td><td>" . $rD['dc'] . "</td></tr>";
       }
     }
     else{
