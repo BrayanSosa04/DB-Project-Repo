@@ -13,7 +13,7 @@
 </style>
 
 <body>
-    <h1>Remove a Physician</h1>
+    <h1>Remove a Specialist</h1>
     <form action = "deleteSpecialistsucc.php" method = "POST">
         <label for = "Spec_ID">Select a Specialist to remove:</label>
         <select id = "Spec_ID" Spec_ID = "Spec_ID" name = "Spec_ID">
@@ -31,7 +31,7 @@
         ?>
         </select>
         <br></br>
-        <button type = "submit" name = "submit">Remove this Physician</button>
+        <button type = "submit" name = "submit">Remove this Specialist</button>
         <button type = "submit" name = "submit_p" formaction = "CEO.php">Return to the main page</button>
     </form>
 </body>
