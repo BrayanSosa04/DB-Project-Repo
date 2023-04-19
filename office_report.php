@@ -57,7 +57,7 @@
 
     $sqlD = "SELECT d.Department_Name as dname, d.Head_Specialist as hs, d.Asso_Office as ao, d.Date_Created as dc
              FROM departments as d, offices as o
-             WHERE d.Asso_Office = o.OFFICE_ID
+             WHERE d.Asso_Office = o.OFFICE_ID AND d.Flagged_Delete = 0 AND o.Flagged_Delete = 0
              ORDER BY d.Asso_Office;";
 
     $resultD = mysqli_query($conn, $sqlD);
