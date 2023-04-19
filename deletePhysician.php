@@ -30,5 +30,8 @@
             }
         ?>
         </select>
+        <br></br>
+        <button type = "submit" name = "submit">Remove this Physician</button>
+        <button type = "submit" name = "submit_p" formaction = "patient.php">Return to the main page</button>
     </form>
 </body>
