@@ -15,8 +15,10 @@
 </style>
 <table>
   <tr>
-    <th>Employee_ID</th>
-    <th>Office</th>
+    <th>Employee Name</th>
+    <th>Employee ID</th>
+    <th>Office ID</th>
+    <th>Office Address</th>
     <th>Salary</th>
   </tr>
   <?php
@@ -34,7 +36,7 @@
 
     if($resultCheck2 > 0) {
       while($row2 = mysqli_fetch_assoc($result2)) {
-        echo "<tr><td>" . $row2["Employee_ID"] . "</td><td>" . $row2["OFFICE_ID"] . "</td><td>" . $row2["Salary"] . "</td></tr>";
+        echo "<tr><td>" . $row2["Employee_Name"] . "</td><td>" . $row2["Employee_ID"] . "</td><td>" . $row2["OFFICE_ID"] . "</td><td>" . $row2["ADDRESS"] . "</td><td>" . $row2["Salary"] . "</td></tr>";
       }
     } else {
       echo "No doctors found";
