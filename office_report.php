@@ -13,7 +13,7 @@
     text-align: center;
     }
 </style>
-<table>
+<table>Office Report:
   <tr>
     <th>Office ID</th>
     <th>Address</th>
@@ -42,6 +42,36 @@
     }
   ?>
 </table>
+
 <br></br>
+
+<table>Available Departments:
+  <tr>
+    <th>Department Name</th>
+    <th>Head Specialist</th>
+    <th>Associated Office</th>
+    <th>Date Created</th>
+  </tr>
+  <?php 
+    include_once 'connectToTheDB.php';
+
+    $sqlD = "SELECT d.Department_Name, d.Head_Specialist, d.Asso_Office, d.Date_Created
+             FROM departments as d, offices as o
+             WHERE d.Asso_Office = o.OFFICE_ID;";
+
+    $resultD = mysqli_query($conn,  $sqlD);
+    $resultDCheck = mysqli_num_rows($resultD);
+
+    if($resultDCheck > 0){
+      while($rD = mysqli_fetch_assoc($resultD)){
+        echo "<tr><td>" . $rowD['Department_Name'] . "</td><td>" . $rowD['Head_Specialist'] . "</td><td>" . $rowD['Asso_Office'] . "</td><td>" . $rowD['Date_Created'] . "</td></tr>";
+      }
+    }
+    else{
+      echo "No Departments";
+    }
+
+  ?>
+</table>
 <button type = "submit" name = "submit" >Return to the main page</button>
 </form>

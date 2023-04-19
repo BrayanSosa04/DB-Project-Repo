@@ -65,7 +65,7 @@
       }
     }
     else{
-      echo "Your mini patient table doesn't work";
+      echo "No Physicians";
     }
   ?>
 </table>

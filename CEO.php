@@ -31,10 +31,6 @@
       <button type = "submit" id = "DeptCreate" name = "DeptCreate" formaction = "department_create.php">Add Department</button>
       <button type = "submit" id = "DeptUpdate" name = "DeptUpdate" formaction = "department_update.php">Update Department</button>
     </form>
-    
-    <!--<form action = "office_update.php" method = "GET">
-      <button type = "submit" id = "OSVupdate" name = "OSVupdate"> Update Office</button>
-    </form>-->
   </section>
 
   <section id="DSV">
@@ -62,6 +58,7 @@
     <form action = "revenue_report.php" method = "GET">
       <label for = "RSVinput">Revenue:</label>
       <input type = "text" id = "RSVinput" RSVinput = "RSVinput" name = "RSVinput">
+      <br></br>
       <button type = "submit" id = "RSVsubmit" name = "RSVsubmit">View Revenue Report</button>
     </form>
     <form action = "revenue_report2.php" method = "GET">
