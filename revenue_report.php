@@ -55,8 +55,7 @@
     include_once 'connectToTheDB.php';
     $sql4 = "SELECT p.Employee_Name as emp_name, p.Employee_ID, p.Salary, p.Asso_Office as aso_off
             FROM physician as p, offices as o 
-            WHERE o.Flagged_Delete = 0 AND p.Flagged_Delete = 0
-            GROUP BY p.Asso_Office;";
+            WHERE o.Flagged_Delete = 0 AND p.Flagged_Delete = 0;";
     $result4 = mysqli_query($conn, $sql4);
     $resultcheck4 = mysqli_num_rows($result4);
 
