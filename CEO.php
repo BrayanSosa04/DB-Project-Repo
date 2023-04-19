@@ -24,7 +24,7 @@
       <input type = "text" id = "OSVinput" OSVinput = "OSVinput" name = "OSVinput">
 
       <label for = "OSVinput2"># of Specialists:</label>
-      <input type = "text" id = "OSVinput2" OSVinput = "OSVinput2" name = "OSVinput2">
+      <input type = "text" id = "OSVinput2" OSVinput = "OSVinput2" name = "OSVinput2"><br></br>
       <button type = "submit" id = "OSVsubmit" name = "OSVsubmit">View Office Report</button>
       <button type = "submit" id = "OSVcreate" name = "OSVcreate" formaction = "office_create.php">Add Office</button>
       <button type = "submit" id = "OSVupdate" name = "OSVupdate" formaction = "office_update.php"> Update Office</button>
@@ -41,7 +41,7 @@
       <input type = "text" id = "DSVinput" DSVinput = "DSVinput" name = "DSVinput">
 
       <label for = "DSVinput2">Office ID:</label>
-      <input type = "text" id = "DSVinput2" DSVinput = "DSVinput2" name = "DSVinput2">
+      <input type = "text" id = "DSVinput2" DSVinput = "DSVinput2" name = "DSVinput2"><br></br>
       <button type = "submit" id = "DSVsubmit" name = "DSVsubmit">View Doctor Report</button>
       
       <br></br>
