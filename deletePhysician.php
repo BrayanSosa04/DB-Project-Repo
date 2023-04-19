@@ -11,7 +11,6 @@
       border-style: double;
   }
 </style>
-
 <body>
     <h1>Remove a Physician</h1>
     <form action = "deletePhysiciansucc.php" method = "POST">

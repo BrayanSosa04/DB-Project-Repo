@@ -1,3 +1,9 @@
+<style>
+  body {
+    background-color: lightgray;
+  }
+</style>
+<body>
 <?php
     include_once 'connectToTheDB.php';
 
@@ -13,6 +19,7 @@
         echo "Sorry we can not remove this specialist";
     }
 ?>
+</body>
 <form action = "CEO.php">
     <button type = "submit" name = "submit" >Return to the main page</button>
 </form>
