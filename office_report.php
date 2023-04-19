@@ -90,7 +90,7 @@
 
     $sqlS = "SELECT s.Employee_Name as sname, s.Employee_ID as spID, s.Specialist_Practice as sprac, s.Asso_Office as soff, s.Date_First_Employed as sdfe
              FROM specialist as s, offices as o
-             WHERE s.OFFICE_ID = s.Asso_Office
+             WHERE o.OFFICE_ID = s.Asso_Office AND s.Flagged_Delete = 0 AND o.Flagged_Delete = 0
              ORDER BY s.Asso_Office;";
 
     $resultS = mysqli_query($conn, $sqlS);
