@@ -147,7 +147,7 @@ body {
       <div id = "yes" class = "yesOrNoContent">
       <label for = "Physician_ID_Appointment">Select the physician that gave you the approval:</label>
       <select id = "Physician_ID_Appointment" Physician_ID_Appointment = "Physician_ID_Appointment"  name = "Physician_ID_Appointment_Yes" >
-        <option value = "">--Not Selected--</option>
+        <option value = "">--None Selected--</option>
       <?php 
         include_once 'connectToTheDB.php';
 
@@ -165,7 +165,7 @@ body {
 
       <label for="Specialist_ID_Appointment">Select the specialist that you would like to see:</label>
       <select id = "Specialist_ID_Appointment" Specialist_ID_Appointment = "Specialist_ID_Appointment" name = "Specialist_ID_Appointment">
-        <option value = "">--Not Selected--</option>
+        <option value = "">--None Selected--</option>
         <?php 
           include_once 'connectToTheDB.php';
 
@@ -185,7 +185,7 @@ body {
       <div id = "no" class = "yesOrNoContent">
         <label for = "Physician_ID_Appointment">Select the physician that you would like to see:</label>
         <select id = "Physician_ID_Appointment" Physician_ID_Appointment = "Physician_ID_Appointment" name = "Physician_ID_Appointment_No" >
-          <option value = "">--Not Selected--</option>
+          <option value = "">--None Selected--</option>
           <?php 
             include_once 'connectToTheDB.php';
 
