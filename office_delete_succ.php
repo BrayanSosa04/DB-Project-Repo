@@ -9,7 +9,7 @@
 
     $off_ID = $_POST['off_ID'];
 
-    $sql = "UPDATE office SET FLagged_Delete = 1 WHERE OFFICE_ID = '$off_ID' AND Flagged_Delete = 0;";
+    $sql = "UPDATE offices SET FLagged_Delete = 1 WHERE OFFICE_ID = '$off_ID' AND Flagged_Delete = 0;";
 
     $result = mysqli_query($conn, $sql);
 
