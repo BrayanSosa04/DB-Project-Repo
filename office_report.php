@@ -55,7 +55,7 @@
   <?php 
     include_once 'connectToTheDB.php';
 
-    $sqlD = "SELECT d.Department_Name, d.Head_Specialist, d.Asso_Office, d.Date_Created
+    $sqlD = "SELECT d.Department_Name as dname, d.Head_Specialist as hs, d.Asso_Office as ao, d.Date_Created as dc
              FROM departments as d, offices as o
              WHERE d.Asso_Office = o.OFFICE_ID;";
 
@@ -64,7 +64,7 @@
 
     if($resultDCheck > 0){
       while($rD = mysqli_fetch_assoc($resultD)){
-        echo "<tr><td>" . $rowD['Department_Name'] . "</td><td>" . $rowD['Head_Specialist'] . "</td><td>" . $rowD['Asso_Office'] . "</td><td>" . $rowD['Date_Created'] . "</td></tr>";
+        echo "<tr><td>" . $rowD['dname'] . "</td><td>" . $rowD['hs'] . "</td><td>" . $rowD['ao'] . "</td><td>" . $rowD['dc'] . "</td></tr>";
       }
     }
     else{
