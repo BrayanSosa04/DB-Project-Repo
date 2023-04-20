@@ -21,7 +21,14 @@
   $SUpdateSex = $_POST['SUpdateSex'];
   $SUpdateEmail = $_POST['SUpdateEmail'];
   $SUpdatePhone = $_POST['SUpdatePhone'];
-  $SUpdateAvailable = $_POST['SUpdateAvailable'];
+  if(!empty($_POST['SUpdateAvailable'])){
+    $SUpdateAvailable = $_POST['SUpdateAvailable'];
+  }
+  else{
+    $sqla = "SELECT Available FROM physician WHERE Employee_ID = '$SUpdateID';";
+    $SUpdateAvailable = mysqli_query($conn, $sqla);
+  }
+  
   $SUpdateSalary = $_POST['SUpdateSalary'];
   $SUpdateLast_Modified = date('Y-m-d');
   $SUpdateModifiedBy = $_POST['SUpdateModifiedBy'];
