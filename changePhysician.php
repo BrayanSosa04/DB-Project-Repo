@@ -82,9 +82,9 @@
 
       <label for = "SUpdateSex">Sex:</label>
       <select id = "SUpdateSex" SUpdateSex = "SUpdateSex" name = "SUpdateSex">
-        <option value = "M">M</option>
-        <option value = "F">F</option>
-        <option value = "O">O</option>
+        <option value = "M">Male</option>
+        <option value = "F">Female</option>
+        <option value = "O">Other</option>
       </select>
 
       <label for = "SUpdateEmail">Email:</label>
