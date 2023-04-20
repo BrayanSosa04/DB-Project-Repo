@@ -120,7 +120,7 @@
 
       <label for = "SUpdateSupervisor">Change Supervisor:</label>
       <select id = "SUpdateSupervisor" SUpdateSupervisor = "SUpdateSupervisor" name = "SUpdateSupervisor">
-        <option value = "<?php NULL?>">None Selected</option>
+        <option value = "">None Selected</option>
         <?php 
           include_once 'connectToTheDB.php';
 

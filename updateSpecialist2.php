@@ -80,7 +80,13 @@
     $SUpdateYearsHD = $rowYHD['Years_as_head_of_Department'];
   }
 
-  $SUpdateSupervisor = $_POST['SUpdateSupervisor'];
+  if(!empty($_POST['SUpdateSupervisor'])){
+    $SUpdateSupervisor = $_POST['SUpdateSupervisor'];
+  }
+  else{
+    $SUpdateSupervisor = NULL;
+  }
+ 
 
   if(!empty($_POST['SUpdatePractice'])){
     $SUpdatePractice = $_POST['SUpdatePractice'];
