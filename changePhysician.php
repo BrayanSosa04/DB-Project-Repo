@@ -64,7 +64,7 @@
         <?php 
             include_once 'connectToTheDB.php';
 
-            $sqlOff = "SELECT * FROM offices;";
+            $sqlOff = "SELECT * FROM offices WHERE Flagged_Delete = 0;";
             $resultOff = mysqli_query($conn, $sqlOff);
 
             while($rOff = mysqli_fetch_array($resultOff)){
@@ -81,7 +81,7 @@
         <?php 
             include_once 'connectToTheDB.php';
 
-            $sqlDept = "SELECT * FROM departments;";
+            $sqlDept = "SELECT * FROM departments WHERE Flagged_Delete = 0;";
             $resultDept = mysqli_query($conn, $sqlDept);
 
             while($rDept = mysqli_fetch_array($resultDept)){
