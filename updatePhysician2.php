@@ -27,7 +27,7 @@
   }
   else{
     $sqla = "SELECT Available FROM physician WHERE Employee_ID = '$SUpdateID';";
-    $SUpdateAvailable = mysqli_query($conn, $sqla);
+    $SUpdateAvailable = "SELECT Available FROM physician WHERE Employee_ID = '$SUpdateID';";
   }
   
   $SUpdateSalary = $_POST['SUpdateSalary'];
