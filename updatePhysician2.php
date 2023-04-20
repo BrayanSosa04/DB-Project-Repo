@@ -28,7 +28,7 @@
 
   $sql = "UPDATE physician
           SET Employee_Name = '$SUpdateName', Asso_Office = '$SUpdateOffice', Asso_Department = '$SUpdateDepartment', Sex = '$SUpdateSex', Employee_Email = '$SUpdateEmail', Employee_Phone = '$SUpdatePhone', Available = '$SUpdateAvailable', Salary = '$SUpdateSalary', Last_Date_Modified = '$SUpdateLast_Modified', Last_Modified_By = '$SUpdateModifiedBy'
-          WHERE EMPLOYEE_ID = '$SUpdateID';";
+          WHERE Employee_ID = '$SUpdateID';";
   $result = mysqli_query($conn, $sql);
 
   if($result) {
