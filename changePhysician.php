@@ -99,5 +99,6 @@
       <br></br>
       <button type = "submit" name = "submit">Update Physician</button>
       <button type = "submit_c" name = "submit_c" formaction = "CEO.php">Return to CEO page</button>
+    </form>
   </section>
 </body>

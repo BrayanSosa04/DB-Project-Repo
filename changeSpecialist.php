@@ -39,18 +39,29 @@
   <h1>Update Specialists</h1>
   <section id = "SUpdateOverview">
     <form action = "updatePhysician2.php" method = "POST">
-      <label for = "SUpdateID">Employee ID:</label>
-      <input type = "text" id = "SUpdateID" SUpdateID = "SUpdateID" name = "SUpdateID">
+      <label for = "SUpdateID">Select Specialist to Change:</label>
+      <select id = "SUpdateID" SUpdateID = "SUpdateID" name = "SUpdateID">
+        <?php 
+            include_once 'connectToTheDB.php';
 
-      <label for = "SUpdateName">Name:</label>
-      <input type = "text" id = "SUpdateName" SUpdateName = "SUpdateName" name = "SUpdateName">
+            $sqlS = "SELECT * FROM specialist WHERE Flagged_Delete = 0;";
+            $resultS = mysqli_query($conn, $sqlS);
+
+            while($rS = mysqli_fetch_array($resultS)){
+        ?>  
+            <option value = "<?php echo $rS['Employee_ID']; ?>"><?php echo $rS['Employee_Name']; ?></option>
+            
+        <?php
+        }
+        ?>
+      </select>
 
       <label for = "SUpdateOffice">Office:</label>
       <select id = "Spe_Off" Phy_Off = "Spe_Off" name = "Spe_Off">
         <?php 
             include_once 'connectToTheDB.php';
 
-            $sqlOff = "SELECT * FROM offices;";
+            $sqlOff = "SELECT * FROM offices WHERE Flagged_Delete = 0;";
             $resultOff = mysqli_query($conn, $sqlOff);
 
             while($rOff = mysqli_fetch_array($resultOff)){
@@ -67,7 +78,7 @@
         <?php 
             include_once 'connectToTheDB.php';
 
-            $sqlDept = "SELECT * FROM departments;";
+            $sqlDept = "SELECT * FROM departments WHERE Flagged_Delete = 0;";
             $resultDept = mysqli_query($conn, $sqlDept);
 
             while($rDept = mysqli_fetch_array($resultDept)){
@@ -79,35 +90,15 @@
         ?>
       </select>
 
-      <label for = "SUpdateSex">Sex:</label>
-      <select id = "SUpdateSex" SUpdateSex = "SUpdateSex" name = "SUpdateSex">
-        <option value = "M">M</option>
-        <option value = "F">F</option>
-        <option value = "O">O</option>
-      </select>
-
-      <label for = "SUpdateAvailable">Availability:</label>
-      <input type = "text" id = "SUpdateAvailable" SUpdateAvailable = "SUpdateAvailable" name = "SUpdateAvailable">
-
       <label for = "SUpdatePractice">Practice:</label>
       <input type = "text" id = "SUpdatePractice" SUpdatePractice = "SUpdatePractice" name = "SUpdatePractice">
       
-      <label for = "SUpdateEmail">Email:</label>
-      <input type = "text" id = "SUpdateEmail" SUpdateEmail = "SUpdateEmail" name = "SUpdateEmail">
-
-      <label for = "SUpdatePhone">Phone #:</label>
-      <input type = "text" id = "SUpdatePhone" SUpdatePhone = "SUpdatePhone" name = "SUpdatePhone">
-
-      <label for = "SUpdateYearsInDept">Years In Department:</label>
-      <input type = "number" id = "SUpdateYearsInDept" SUpdateYearsInDept = "SUpdateYearsInDept" name = "SUpdateYearsInDept">
-
-      <label for = "SUpdateYearsHD">Years As Head of Department:</label>
-      <input type = "number" id = "SUpdateYearsHD" SUpdateYearsHD = "SUpdateYearsHD" name = "SUpdateYearsHD">
-
-      <label for = "SUpdateSupervisor">Supervisor ID:</label>
-      <input type = "text" id = "SUpdateSupervisor" SUpdateSupervisor = "SUpdateSupervisor" name = "SUpdateSupervisor">
 
       <label for = "SUpdateModifiedBy">Your Employee ID:</label>
       <input type = "text" id = "SUpdateModifiedBy" SUpdateModifiedBy = "SUpdateModifiedBy" name = "SUpdateModifiedBy">
+      <br></br>
+      <button type = "submit" name = "submit">Update Specialist</button>
+      <button type = "submit_c" name = "submit_c" formaction = "CEO.php">Return to CEO page</button>
+    </form>
   </section>
 </body>
