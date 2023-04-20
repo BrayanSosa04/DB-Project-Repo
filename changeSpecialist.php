@@ -38,7 +38,7 @@
 <body>
   <h1>Update Specialists</h1>
   <section id = "SUpdateOverview">
-    <form action = "updatePhysician2.php" method = "POST">
+    <form action = "updateSpecialist2.php" method = "POST">
       <label for = "SUpdateID">Select Specialist to Change:</label>
       <select id = "SUpdateID" SUpdateID = "SUpdateID" name = "SUpdateID">
         <?php 

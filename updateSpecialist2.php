@@ -17,30 +17,19 @@
   $SUpdateID = $_POST['SUpdateID'];
   $SUpdateOffice = $_POST['Spe_Off'];
   $SUpdateDepartment = $_POST['Spe_Dept'];
-  
-  
-  if(!empty($_POST['SUpdateSalary'])){
-    $SUpdateSalary = $_POST['SUpdateSalary'];
-  }
-  else{
-    $sql = "SELECT Salary FROM physician WHERE Employee_ID = '$SUpdateID';";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $SUpdateSalary = $row['Salary'];
-  }
-
+  $SUpdatePractice = $_POST['SUpdatePractice'];
   $SUpdateLast_Modified = date('Y-m-d');
   $SUpdateModifiedBy = $_POST['SUpdateModifiedBy'];
 
-  $sql = "UPDATE physician
-          SET Asso_Office = '$SUpdateOffice', Asso_Department = '$SUpdateDepartment', Salary = $SUpdateSalary, Last_Date_Modified = '$SUpdateLast_Modified', Last_Modified_By = '$SUpdateModifiedBy'
+  $sql = "UPDATE specialist
+          SET Asso_Office = '$SUpdateOffice', Asso_Department = '$SUpdateDepartment',Specialist_Practice = '$SUpdatePractice', Last_Date_Modified = '$SUpdateLast_Modified', Last_Modified_By = '$SUpdateModifiedBy'
           WHERE Employee_ID = '$SUpdateID';";
   $result = mysqli_query($conn, $sql);
 
   if($result) {
-    echo 'Physician Updated';
+    echo 'Specialist Updated';
   } else {
-    echo 'Physician Update Failed';
+    echo 'Specialist Update Failed';
   }
 ?>
 <form action = "CEO.php">
