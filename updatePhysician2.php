@@ -21,6 +21,7 @@
   $SUpdateSex = $_POST['SUpdateSex'];
   $SUpdateEmail = $_POST['SUpdateEmail'];
   $SUpdatePhone = $_POST['SUpdatePhone'];
+  $SUpdateAvailable = "";
   if(!empty($_POST['SUpdateAvailable'])){
     $SUpdateAvailable = $_POST['SUpdateAvailable'];
   }
