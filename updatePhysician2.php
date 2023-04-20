@@ -15,18 +15,60 @@
   include_once 'connectToTheDB.php';
 
   $SUpdateID = $_POST['SUpdateID'];
+
+  if(!empty($_POST['SUpdateName'])){
+    $SUpdateName = $_POST['SUpdateName'];
+  }
+  else{
+    $sqlN = "SELECT Employee_Name FROM physician WHERE Employee_ID = '$SUpdateID';";
+    $resultN = mysqli_query($conn, $sqlN);
+    $rowN = mysqli_fetch_assoc($resultN);
+    $SUpdateName = $rowN['Employee_Name'];
+  }
+
   $SUpdateOffice = $_POST['Spe_Off'];
   $SUpdateDepartment = $_POST['Spe_Dept'];
+  $SUpdateSex = $_POST['SUpdateSex'];
+  
+  if(!empty($_POST['SUpdateEmail'])){
+    $SUpdateEmail = $_POST['SUpdateEmail'];
+  }
+  else{
+    $sqlE = "SELECT Employee_Email FROM physician WHERE Employee_ID = '$SUpdateID';";
+    $resultE = mysqli_query($conn, $sqlE);
+    $rowE = mysqli_fetch_assoc($resultE);
+    $SUpdateEmail = $rowE['Employee_Email'];
+  }
+  
+  if(!empty($_POST['SUpdatePhone'])){
+    $SUpdatePhone = $_POST['SUpdatePhone'];
+  }
+  else{
+    $sqlP = "SELECT Employee_Phone FROM physician WHERE Employee_ID = '$SUpdateID';";
+    $resultP = mysqli_query($conn, $sqlP);
+    $rowP = mysqli_fetch_assoc($resultP);
+    $SUpdatePhone = $rowP['Employee_Phone'];
+  }
+  
+  if(!empty($_POST['SUpdateAvailable'])){
+    $SUpdateAvailable = $_POST['SUpdateAvailable'];
+  }
+  else{
+    $sqlA = "SELECT Available FROM physician WHERE Employee_ID = '$SUpdateID';";
+    $resultA = mysqli_query($conn, $sqlA);
+    $rowA = mysqli_fetch_assoc($resultA);
+    $SUpdateAvailable = $rowA['Available'];
+  }
   
   
   if(!empty($_POST['SUpdateSalary'])){
     $SUpdateSalary = $_POST['SUpdateSalary'];
   }
   else{
-    $sql = "SELECT Salary FROM physician WHERE Employee_ID = '$SUpdateID';";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $SUpdateSalary = $row['Salary'];
+    $sqlS = "SELECT Salary FROM physician WHERE Employee_ID = '$SUpdateID';";
+    $resultS = mysqli_query($conn, $sqlS);
+    $rowS = mysqli_fetch_assoc($resultS);
+    $SUpdateSalary = $rowS['Salary'];
   }
 
   $SUpdateLast_Modified = date('Y-m-d');

@@ -56,6 +56,9 @@
         ?>
       </select>
 
+      <label for = "SUpdateName">Name:</label>
+      <input type = "text" id = "SUpdateName" SUpdateName = "SUpdateName" name = "SUpdateName">
+
       <label for = "SUpdateOffice">Change Office:</label>
       <select id = "Spe_Off" Phy_Off = "Spe_Off" name = "Spe_Off">
         <?php 
@@ -90,7 +93,23 @@
         ?>
       </select>
 
-      <label for = "SUpdateSalary">Change Salary:</label>
+      <label for = "SUpdateSex">Sex:</label>
+      <select id = "SUpdateSex" SUpdateSex = "SUpdateSex" name = "SUpdateSex">
+        <option value = "M">Male</option>
+        <option value = "F">Female</option>
+        <option value = "O">Other</option>
+      </select>
+
+      <label for = "SUpdateEmail">Email:</label>
+      <input type = "text" id = "SUpdateEmail" SUpdateEmail = "SUpdateEmail" name = "SUpdateEmail">
+
+      <label for = "SUpdatePhone">Phone #:</label>
+      <input type = "text" id = "SUpdatePhone" SUpdatePhone = "SUpdatePhone" name = "SUpdatePhone">
+
+      <label for = "SUpdateAvailable">Availability:</label>
+      <input type = "text" id = "SUpdateAvailable" SUpdateAvailable = "SUpdateAvailable" name = "SUpdateAvailable">
+
+      <label for = "SUpdateSalary">Salary:</label>
       <input type = "number" id = "SUpdateSalary" SUpdateSalary = "SUpdateSalary" name = "SUpdateSalary">
 
       <label for = "SUpdateModifiedBy">Your Employee ID:</label>
