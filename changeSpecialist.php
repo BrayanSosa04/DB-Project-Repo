@@ -74,7 +74,7 @@
         <?php
             }
         ?>
-     </select>
+     </select><br></br>
 
       <label for = "SUpdateDept">Change Department:</label>
       <select id = "Spe_Dept" Phy_Dept = "Spe_Dept" name = "Spe_Dept">
@@ -93,7 +93,7 @@
         ?>
       </select>
 
-      <<label for = "SUpdateSex">Change Sex:</label>
+      <label for = "SUpdateSex">Change Sex:</label>
       <select id = "SUpdateSex" SUpdateSex = "SUpdateSex" name = "SUpdateSex">
         <option value = "M">M</option>
         <option value = "F">F</option>
@@ -104,7 +104,7 @@
       <input type = "text" id = "SUpdateAvailable" SUpdateAvailable = "SUpdateAvailable" name = "SUpdateAvailable">
 
       <label for = "SUpdatePractice">Change Practice:</label>
-      <input type = "text" id = "SUpdatePractice" SUpdatePractice = "SUpdatePractice" name = "SUpdatePractice">
+      <input type = "text" id = "SUpdatePractice" SUpdatePractice = "SUpdatePractice" name = "SUpdatePractice"><br></br>
       
       <label for = "SUpdateEmail">Change Email:</label>
       <input type = "text" id = "SUpdateEmail" SUpdateEmail = "SUpdateEmail" name = "SUpdateEmail">
@@ -116,7 +116,7 @@
       <input type = "number" id = "SUpdateYearsInDept" SUpdateYearsInDept = "SUpdateYearsInDept" name = "SUpdateYearsInDept">
 
       <label for = "SUpdateYearsHD">Change Years As Head of Department:</label>
-      <input type = "number" id = "SUpdateYearsHD" SUpdateYearsHD = "SUpdateYearsHD" name = "SUpdateYearsHD">
+      <input type = "number" id = "SUpdateYearsHD" SUpdateYearsHD = "SUpdateYearsHD" name = "SUpdateYearsHD"><br></br>
 
       <label for = "SUpdateSupervisor">Change Supervisor:</label>
       <select id = "SUpdateSupervisor" SUpdateSupervisor = "SUpdateSupervisor" name = "SUpdateSupervisor">
