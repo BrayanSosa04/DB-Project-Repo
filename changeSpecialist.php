@@ -56,7 +56,10 @@
         ?>
       </select>
 
-      <label for = "SUpdateOffice">Office:</label>
+      <label for = "SUpdateName">Change Name:</label>
+      <input type = "text" id = "SUpdateName" SUpdateName = "SUpdateName" name = "SUpdateName">
+
+      <label for = "SUpdateOffice">Change Office:</label>
       <select id = "Spe_Off" Phy_Off = "Spe_Off" name = "Spe_Off">
         <?php 
             include_once 'connectToTheDB.php';
@@ -73,7 +76,7 @@
         ?>
      </select>
 
-      <label for = "SUpdateDept">Department:</label>
+      <label for = "SUpdateDept">Change Department:</label>
       <select id = "Spe_Dept" Phy_Dept = "Spe_Dept" name = "Spe_Dept">
         <?php 
             include_once 'connectToTheDB.php';
@@ -90,12 +93,51 @@
         ?>
       </select>
 
-      <label for = "SUpdatePractice">Practice:</label>
+      <<label for = "SUpdateSex">Change Sex:</label>
+      <select id = "SUpdateSex" SUpdateSex = "SUpdateSex" name = "SUpdateSex">
+        <option value = "M">M</option>
+        <option value = "F">F</option>
+        <option value = "O">O</option>
+      </select>
+
+      <label for = "SUpdateAvailable">Change Availability:</label>
+      <input type = "text" id = "SUpdateAvailable" SUpdateAvailable = "SUpdateAvailable" name = "SUpdateAvailable">
+
+      <label for = "SUpdatePractice">Change Practice:</label>
       <input type = "text" id = "SUpdatePractice" SUpdatePractice = "SUpdatePractice" name = "SUpdatePractice">
       
+      <label for = "SUpdateEmail">Change Email:</label>
+      <input type = "text" id = "SUpdateEmail" SUpdateEmail = "SUpdateEmail" name = "SUpdateEmail">
 
-      <label for = "SUpdateModifiedBy">Your Employee ID:</label>
+      <label for = "SUpdatePhone">Change Phone #:</label>
+      <input type = "text" id = "SUpdatePhone" SUpdatePhone = "SUpdatePhone" name = "SUpdatePhone">
+
+      <label for = "SUpdateYearsInDept">Change Years In Department:</label>
+      <input type = "number" id = "SUpdateYearsInDept" SUpdateYearsInDept = "SUpdateYearsInDept" name = "SUpdateYearsInDept">
+
+      <label for = "SUpdateYearsHD">Change Years As Head of Department:</label>
+      <input type = "number" id = "SUpdateYearsHD" SUpdateYearsHD = "SUpdateYearsHD" name = "SUpdateYearsHD">
+
+      <label for = "SUpdateSupervisor">Change Supervisor:</label>
+      <select id = "SUpdateSupervisor" SUpdateSupervisor = "SUpdateSupervisor" name = "SUpdateSupervisor">
+        <?php 
+          include_once 'connectToTheDB.php';
+
+          $sqlSup = "SELECT * FROM specialist WHERE Flagged_Delete = 0 AND Supervisor_ID IS NULL;";
+          $resultSup = mysqli_query($conn, $sqlSup);
+
+          while($rSup = mysqli_fetch_array($resultSup)){
+        ?>  
+          <option value = "<?php echo $rSup['Employee_ID']; ?>"><?php echo $rSup['Employee_Name']; ?></option>
+              
+        <?php
+        }
+        ?>
+      </select>
+
+      <label for = "SUpdateModifiedBy">Change Your Employee ID:</label>
       <input type = "text" id = "SUpdateModifiedBy" SUpdateModifiedBy = "SUpdateModifiedBy" name = "SUpdateModifiedBy">
+
       <br></br>
       <button type = "submit" name = "submit">Update Specialist</button>
       <button type = "submit_c" name = "submit_c" formaction = "CEO.php">Return to CEO page</button>

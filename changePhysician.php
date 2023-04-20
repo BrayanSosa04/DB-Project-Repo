@@ -56,7 +56,7 @@
         ?>
       </select>
 
-      <label for = "SUpdateName">Name:</label>
+      <label for = "SUpdateName">Change Name:</label>
       <input type = "text" id = "SUpdateName" SUpdateName = "SUpdateName" name = "SUpdateName">
 
       <label for = "SUpdateOffice">Change Office:</label>
@@ -93,23 +93,23 @@
         ?>
       </select>
 
-      <label for = "SUpdateSex">Sex:</label>
+      <label for = "SUpdateSex">Change Sex:</label>
       <select id = "SUpdateSex" SUpdateSex = "SUpdateSex" name = "SUpdateSex">
         <option value = "M">Male</option>
         <option value = "F">Female</option>
         <option value = "O">Other</option>
       </select>
 
-      <label for = "SUpdateEmail">Email:</label>
+      <label for = "SUpdateEmail">Change Email:</label>
       <input type = "text" id = "SUpdateEmail" SUpdateEmail = "SUpdateEmail" name = "SUpdateEmail">
 
-      <label for = "SUpdatePhone">Phone #:</label>
+      <label for = "SUpdatePhone">Change Phone #:</label>
       <input type = "text" id = "SUpdatePhone" SUpdatePhone = "SUpdatePhone" name = "SUpdatePhone">
 
-      <label for = "SUpdateAvailable">Availability:</label>
+      <label for = "SUpdateAvailable">Change Availability:</label>
       <input type = "text" id = "SUpdateAvailable" SUpdateAvailable = "SUpdateAvailable" name = "SUpdateAvailable">
 
-      <label for = "SUpdateSalary">Salary:</label>
+      <label for = "SUpdateSalary">Change Salary:</label>
       <input type = "number" id = "SUpdateSalary" SUpdateSalary = "SUpdateSalary" name = "SUpdateSalary">
 
       <label for = "SUpdateModifiedBy">Your Employee ID:</label>
