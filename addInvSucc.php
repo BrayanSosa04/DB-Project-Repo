@@ -9,13 +9,15 @@
 
         $Inv_ID = $_POST['Inv_ID'];
         $Inv_Name  = $_POST['Inv_Name'];
-        $Inv_Off = $_POST['Inv_Off'];
         $Inv_Count  = $_POST['Inv_Count'];
+        $Inv_Off = $_POST['Inv_Off'];
+        $Inv_cost = $_POST['Inv_cost'];
         $Inv_TD = $_POST['Inv_TD'];
+        $Inv_ED = $_POST['Inv_ED'];
         $Mod_By = $_POST['Mod_By'];
 
-        $sql = "INSERT INTO inventory(Inventory_ID, Inventory_Name, Asso_Office, Inventory_Count, Date_Created, Last_Date_Modified, Flagged_Delete)
-                VALUES('$Inv_ID', '$Inv_Name', '$Inv_Off', '$Inv_Count', '$Inv_TD', '$Inv_TD', 0);";
+        $sql = "INSERT INTO inventory(Inventory_ID, Inventory_Name, Asso_Office, Inventory_Count, Inventory_Cost, Date_Purchased, Expiration_Date Last_Modified_Date, Last_Modified_By, Flagged_Delete)
+                VALUES('$Inv_ID', '$Inv_Name', '$Inv_Off', '$Inv_Count', '$Inv_cost' '$Inv_TD', '$Inv_TD', '$Mod_By', 0);";
 
         $result = mysqli_query($conn, $sql);
         if($result){
