@@ -30,7 +30,7 @@ text-align: center;
     <label for = "Inv_Count">Please input the amount you would like:</label>
     <input type = "text" id = "Inv_Count" Inv_Count = "Inv_Count" name = "Inv_Count">
 
-    
+    <br></br>
     <button type = "submit" name = "submit">Order </button>
     <button type = "submit" name = "submit_s" formaction="Doc.php">Return to main page</button>
 
@@ -61,5 +61,3 @@ text-align: center;
       }
   ?>
 </table>
-<br></br>
-<button type = "submit" name = "submit" >Return to the main page</button>
