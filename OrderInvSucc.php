@@ -1,14 +1,18 @@
 <?php 
     include_once 'connectToTheDB.php';
 
-    $Inventory_name = $_POST['Inv_name'];
+    $Inventory_ID = $_POST['Inv_name'];
     $Inventory_Count = $_POST['Inventory_Count'];
-    $Inventory_CountN = $_POST['Inventroy_Count'-'Inv_Count'];
     $Modified_Date = date('Y-m-d');
 
+    $sqlS = "SELECT Inventory_Count FROM inventory WHERE Inventory_ID = '$Inventory_ID';";
+    $resultS = mysqli_query($conn, $sqlS);
+    $rowS = mysqli_fetch_assoc($resultS);
+    $add = $rowS['Inventory_Count'];
+
     $sql = "UPDATE inventory
-            SET inventory.Inventory_Count = '$Inventory_CountN', inventory.Last_Modified_Date = '$Modified_Date', inventory.Inventory_name = '$Inventory_name'
-            WHERE inventory.Inventory_Count = '$Inventory_Count' AND inventory.Flagged_Delete = 0;";
+            SET inventory.Inventory_Count = $Inventory_Count + $add, inventory.Last_Modified_Date = '$Modified_Date'
+            WHERE inventory.Inventory_ID = '$Inventory_ID' AND inventory.Flagged_Delete = 0;";
     $result = mysqli_query($conn, $sql);
 
     if($result){

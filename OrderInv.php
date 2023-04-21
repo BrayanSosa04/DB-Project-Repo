@@ -21,13 +21,13 @@ text-align: center;
 
             while($rI = mysqli_fetch_array($resultI)){
           ?>
-              <option value = "<?php echo $rI['Inventory_Name']; ?>"><?php echo $rI['Inventory_Name']; ?></option>
+              <option value = "<?php echo $rI['Inventory_ID']; ?>"><?php echo $rI['Inventory_Name']; ?></option>
           <?php
             }
           ?>
       </select>
     <br></br>
-    <label for = "Inv_Count">Please input the amount you would like:</label>
+    <label for = "Inv_Count">Please input the amount you would like to add/remove:</label>
     <input type = "text" id = "Inv_Count" Inv_Count = "Inv_Count" name = "Inv_Count">
 
     <br></br>
@@ -36,7 +36,7 @@ text-align: center;
 
 </form>
 
-<table style =  "float:left">
+<table style = "float:left">
   <tr>
       <th>ID</th>
       <th>Name</th>
