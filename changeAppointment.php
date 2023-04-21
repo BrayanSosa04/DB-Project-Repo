@@ -48,7 +48,7 @@ text-align: center;
         if($resultCheck > 0){
 
             while($row = mysqli_fetch_assoc($result)){
-                echo "<tr><td>" . $row['Patient_Name'] . "</td><td>" . $row['Patient_ID'] . "</td><td>" . $row['Appointment_Time'] . "</td><td>" . $row['Office_Address'] . "</td><td>" . $row['Reason_For_Visit'] . "</td><td>";
+                echo "<tr><td>" . $row['Patient_Name'] . "</td><td>" . $row['Patient_ID'] . "</td><td>" . $row['Appointment_Time'] . "</td><td>" . $row['Office_Address'] . "</td><td>" . $row['Reason_For_Visit'] . "</td></tr>";
             }
         }
         else{
