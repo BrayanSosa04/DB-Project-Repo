@@ -2,7 +2,7 @@
     include_once 'connectToTheDB.php';
 
     $Inventory_ID = $_POST['Inv_name'];
-    $Inventory_Count = $_POST['Inventory_Count'];
+    $Inventory_Count = $_POST['Inv_Count'];
     $Modified_Date = date('Y-m-d');
 
     $sqlS = "SELECT Inventory_Count FROM inventory WHERE Inventory_ID = '$Inventory_ID';";
@@ -10,7 +10,7 @@
     $rowS = mysqli_fetch_assoc($resultS);
     $add = $rowS['Inventory_Count'];
 
-    echo  $add;
+    echo $Inventory_Count + $add;
 
     $sql = "UPDATE inventory
             SET inventory.Inventory_Count = $Inventory_Count + $add, inventory.Last_Modified_Date = '$Modified_Date'
