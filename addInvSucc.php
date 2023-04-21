@@ -12,6 +12,7 @@
         $Inv_Off = $_POST['Inv_Off'];
         $Inv_Count  = $_POST['Inv_Count'];
         $Inv_TD = $_POST['Inv_TD'];
+        $Mod_By = $_POST['Mod_By'];
 
         $sql = "INSERT INTO inventory(Inventory_ID, Inventory_Name, Asso_Office, Inventory_Count, Date_Created, Last_Date_Modified, Flagged_Delete)
                 VALUES('$Inv_ID', '$Inv_Name', '$Inv_Off', '$Inv_Count', '$Inv_TD', '$Inv_TD', 0);";

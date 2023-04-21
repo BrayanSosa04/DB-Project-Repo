@@ -16,7 +16,7 @@
   <h1>Add Item</h1>
   <form action = "addInvSucc.php" method = "POST">
     <label for = "Inv_ID">Item ID:</label>
-    <input type = "text" id = "Inv_ID" Inv_ID = "Inv_ID" name = "Inv_ID">
+    <input type = "number" id = "Inv_ID" Inv_ID = "Inv_ID" name = "Inv_ID">
 
     <label for = "Inv_Name">Item Name:</label>
     <input type = "text" id = "Inv_Name" Inv_Name = "Inv_Name" name = "Inv_Name" maxlength = "30">
@@ -40,10 +40,17 @@
 
     <br></br>
 
-
     <label for = "Inv_Count">Amount: </label>
     <input type = "text" id = "Inv_Count" Inv_Count = "Inv_Count" name = "Inv_Count">
+
+    <label for = "Inv_cost">Cost per Unit:</label>
+    <input type = "number" id = "Inv_cost" Inv_cost = "Inv_cost" name = "Inv_cost">
+
+    <label for = "Inv_ED">Expiration Date:</label>
+    <input type = "date" id = "Inv_ED" Inv_ED = "Inv_ED" name = "Inv_ED">
     
+    <label for = "Mod_By">Please input your ID:</label>
+    <input type = "text" id = "Mod_By" Mod_By = "Mod_By" name = "Mod_By">
 
     <label for = "Inv_TD">Today's Date:</label>
     <input type = "date" id = "Inv_TD" Inv_TD = "Inv_TD" name = "Inv_TD">
