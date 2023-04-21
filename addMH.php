@@ -21,19 +21,66 @@
     <label for = "Pat_Name">Patient Name:</label>
     <input type = "text" id = "Pat_Name" Pat_Name = "Pat_Name" name = "Pat_Name" maxlength = "30">
 
+    <label for = "Pat_Age">Patient Age:</label>
+    <input type = "number" id = "Pat_Age" Pat_Age = "Pat_Age" name = "Pat_Age">
 
-    <label for = "Pat_Test">Diagnostic Test: </label>
+    <label for = "Pat_Sex">Patient Sex:</label>
+      <select id = "Pat_Sex" Pat_Sex = "Pat_Sex" name = "Pat_Sex">
+        <option value = "M">Male</option>
+        <option value = "F">Female</option>
+        <option value = "O">Other</option>
+      </select>
+
+    <label for = "Pat_Test">Diagnostic Test:</label>
     <input type = "text" id = "Pat_Test" Pat_Test = "Pat_Test" name = "Pat_Test">
 
-    <label for = "Pat_Result">Diagnostic Result: </label>
+    <label for = "Pat_Result">Diagnostic Result:</label>
     <input type = "text" id = "Pat_Result" Pat_Result = "Pat_Result" name = "Pat_Result">
+
+    <label for = "Asso_Phy">Associated Physician:</label>
+    <select id = "Asso_Phy" Asso_Phy = "Asso_Phy" name = "Asso_Phy">
+        <?php 
+          include_once 'connectToTheDB.php';
+
+          $sqlPYes = "SELECT * FROM physician WHERE Flagged_Delete = 0;";
+          $resultPYes =  mysqli_query($conn, $sqlPYes);
+
+          while($rPYes = mysqli_fetch_array($resultPYes)){
+        ?>
+            <option value = "<?php echo $rPYes['Employee_ID']; ?>"><?php echo $rPYes['Employee_Name']; ?></option>
+        <?php
+          }
+        ?>
+    </select>
+
+    <label for = "Asso_Spec">Associated Specialist(if applicable):</label>
+    <select id = "Asso_Spec" Asso_Spec = "Asso_Spec" name = "Asso_Spec">
+        <?php 
+            include_once 'connectToTheDB.php';
+
+            $sqlS = "SELECT * FROM specialist WHERE Flagged_Delete = 0;";
+            $resultS = mysqli_query($conn, $sqlS);
+
+            while($rS = mysqli_fetch_array($resultS)){
+        ?>  
+            <option value = "<?php echo $rS['Employee_ID']; ?>"><?php echo $rS['Employee_Name']; ?></option>
+            
+        <?php
+            }
+        ?>
+    </select>
 
     <label for = "Apt_Date">Appointment Date: </label>
     <input type = "date" id = "Apt_Date" Apt_Date = "Apt_Date" name = "Apt_Date">
+
+    <br></br>
+    <label for = "Emp_ID">Please input your ID:</label>
+    <input type = "text" id = "Emp_ID" Emp_ID = "Emp_ID" name = "Emp_ID" maxlength = "7">
     
     <label for = "Pat_TD">Today's Date:</label>
     <input type = "date" id = "Pat_TD" Pat_TD = "Pat_TD" name = "Pat_TD">
     <br></br>
+
     <button type = "submit" name = "submit" >Finish Adding Medical History</button>
     <button type = "submit" name = "submit_s" formaction="show_patients.php">Return to Patient History page</button>
   </form>
@@ -52,7 +99,7 @@
     text-align: center;
     }
 </style>
-  <table>This is the list of appointments:
+  <table style = "float:left">This is the list of appointments:
     <tr>
         <th>Patient Name</th>
         <th>Patient's ID</th>
@@ -61,7 +108,7 @@
     <?php
         include_once 'connectToTheDB.php';
 
-        $sql = "SELECT Patient_Name, Patient_ID, Appointment_Time FROM appointments;";
+        $sql = "SELECT Patient_Name, Patient_ID, Appointment_Time FROM appointments WHERE Flagged_Delete = 0;";
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
 

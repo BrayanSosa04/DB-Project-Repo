@@ -77,7 +77,7 @@
      </select><br></br>
 
       <label for = "SUpdateDept">Change Department:</label>
-      <select id = "Spe_Dept" Phy_Dept = "Spe_Dept" name = "Spe_Dept">
+      <select id = "Spe_Dept" Spe_Dept = "Spe_Dept" name = "Spe_Dept">
         <?php 
             include_once 'connectToTheDB.php';
 
@@ -95,9 +95,9 @@
 
       <label for = "SUpdateSex">Change Sex:</label>
       <select id = "SUpdateSex" SUpdateSex = "SUpdateSex" name = "SUpdateSex">
-        <option value = "M">M</option>
-        <option value = "F">F</option>
-        <option value = "O">O</option>
+        <option value = "M">Male</option>
+        <option value = "F">Female</option>
+        <option value = "O">Other</option>
       </select>
 
       <label for = "SUpdateAvailable">Change Availability:</label>
