@@ -11,7 +11,7 @@
     $add = $rowS['Inventory_Count'];
 
     $sql = "UPDATE inventory
-            SET inventory.Inventory_Count = intval($Inventory_Count) + intval($add), inventory.Last_Modified_Date = '$Modified_Date'
+            SET inventory.Inventory_Count = $Inventory_Count + $add, inventory.Last_Modified_Date = '$Modified_Date'
             WHERE inventory.Inventory_ID = '$Inventory_ID' AND inventory.Flagged_Delete = 0;";
     $result = mysqli_query($conn, $sql);
 
