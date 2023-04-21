@@ -99,7 +99,8 @@
     text-align: center;
     }
 </style>
-  <table style = "float:left">This is the list of appointments:
+This is the list of appointments:
+  <table style = "float:left">
     <tr>
         <th>Patient Name</th>
         <th>Patient's ID</th>
