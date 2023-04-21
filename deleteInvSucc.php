@@ -8,7 +8,7 @@
     include_once 'connectToTheDB.php';
 
     $Item = $_POST['Inv_name'];
-    $sql = "UPDATE inventory SET Flagged_Delete = 1 WHERE Inventory_Name = '$Item' AND Flagged_Delete = 0";
+    $sql = "UPDATE inventory SET Flagged_Delete = 1 WHERE Inventory_ID = '$Item' AND Flagged_Delete = 0";
 
     $result = mysqli_query($conn, $sql);
 

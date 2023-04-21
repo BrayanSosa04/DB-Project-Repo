@@ -25,7 +25,7 @@
 
             while($rI = mysqli_fetch_array($resultI)){
           ?>
-              <option value = "<?php echo $rI['Inventory_Name']; ?>"><?php echo $rI['Inventory_Name']; ?></option>
+              <option value = "<?php echo $rI['Inventory_ID']; ?>"><?php echo $rI['Inventory_Name']; ?></option>
           <?php
             }
           ?>
