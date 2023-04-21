@@ -96,7 +96,11 @@
   $SUpdateModifiedBy = $_POST['SUpdateModifiedBy'];
 
   $sql = "UPDATE specialist
-          SET Employee_Name = '$SUpdateName', Asso_Office = '$SUpdateOffice', Asso_Department = '$SUpdateDepartment', Sex = '$SUpdateSex', Available = '$SUpdateAvailable', Specialist_Practice = '$SUpdatePractice', Employee_Email = '$SUpdateEmail', Employee_Phone = '$SUpdatePhone', Years_In_Department = $SUpdateYearsInDept, Years_as_head_of_Department = $SUpdateYearsHD, Supervisor_ID = '$SUpdateSupervisor', Last_Date_Modified = '$SUpdateLast_Modified', Last_Modified_By = '$SUpdateModifiedBy'
+          SET Employee_Name = '$SUpdateName', Asso_Office = '$SUpdateOffice', Asso_Department = '$SUpdateDepartment', 
+              Sex = '$SUpdateSex', Available = '$SUpdateAvailable', Specialist_Practice = '$SUpdatePractice', 
+              Employee_Email = '$SUpdateEmail', Employee_Phone = '$SUpdatePhone', Years_In_Department = $SUpdateYearsInDept, 
+              Years_as_head_of_Department = $SUpdateYearsHD, Supervisor_ID = '$SUpdateSupervisor', 
+              Last_Date_Modified = '$SUpdateLast_Modified', Last_Modified_By = '$SUpdateModifiedBy'
           WHERE Employee_ID = '$SUpdateID';";
   $result = mysqli_query($conn, $sql);
 
