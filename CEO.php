@@ -47,7 +47,7 @@
       
       <br></br>
       <button type = "submit" name = "submit_s" formaction = "createSpecialist.php">Add New Specialist</button>
-      <button type = "submit" name = "submit_sc" formaction = "changeSpecialist.php">Modify Existing Specialist, working on it</button>
+      <button type = "submit" name = "submit_sc" formaction = "changeSpecialist.php">Modify Existing Specialist</button>
       <button type = "submit" name = "submit_sd" formaction = "deleteSpecialist.php">Delete Existing Specialist</button><br></br>
       <button type = "submit" name = "submit_p" formaction = "createPhysician.php">Add New Physician</button>
       <button type = "submit" name = "submit_pc" formaction = "changePhysician.php">Modify Existing Physician</button>
