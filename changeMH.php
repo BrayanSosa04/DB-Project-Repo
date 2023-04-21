@@ -30,7 +30,7 @@
           }
         ?>
     </select>
-    
+    <br></br>
     <button type = "submit" name = "submit" >View the patient's Medical History</button>
     <button type = "submit" name = "submit_s" formaction="Doc.php">Return to Patient History page</button>
   </form>
