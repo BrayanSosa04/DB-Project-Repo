@@ -88,7 +88,7 @@
     <br></br>
 
     <button type = "submit" name = "submit" >Finish Adding Medical History</button>
-    <button type = "submit" name = "submit_s" formaction="show_patients.php">Return to Patient History page</button>
+    <button type = "submit" name = "submit_s" formaction="Doc.php">Return to Patient History page</button>
   </form>
 
   <style>

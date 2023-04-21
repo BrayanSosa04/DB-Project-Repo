@@ -37,6 +37,6 @@
         }
     ?>
 </body>
-<form action = "show_patients.php">
+<form action = "Doc.php">
     <button type = "submit" name = "submit">Return to Patient History page</button>
 </form>
