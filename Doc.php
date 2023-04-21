@@ -33,7 +33,20 @@
     <h2 id="patients">Patients</h2>
     <form action = "show_patients.php" method = "GET">
       <label for = "PVinput">Please input Patient ID to see their history:</label>
-      <input type = "text" id = "PVinput" PVinput = "PVinput" name = "PVinput">
+      <select id = "PVinput" PVinput = "PVinput" name = "PVinput">
+        <?php 
+          include_once 'connectToTheDB.php';
+
+          $sqlP = "SELECT * FROM patients WHERE Flagged_Delete = 0;";
+          $resultP =  mysqli_query($conn, $sqlP);
+
+          while($rP = mysqli_fetch_array($resultP)){
+        ?>
+            <option value = "<?php echo $rP['Patient_ID']; ?>"><?php echo $rP['Name']; ?></option>
+        <?php
+          }
+        ?>
+      </select>
 
       <button type = "submit" id = "PVsubmit" name = "PVsubmit">View Patients </button>
       <br></br>
