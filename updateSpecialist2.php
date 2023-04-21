@@ -95,13 +95,24 @@
   $SUpdateLast_Modified = date('Y-m-d');
   $SUpdateModifiedBy = $_POST['SUpdateModifiedBy'];
 
-  $sql = "UPDATE specialist
-          SET Employee_Name = '$SUpdateName', Asso_Office = '$SUpdateOffice', Asso_Department = '$SUpdateDepartment', 
-              Sex = '$SUpdateSex', Available = '$SUpdateAvailable', Specialist_Practice = '$SUpdatePractice', 
-              Employee_Email = '$SUpdateEmail', Employee_Phone = '$SUpdatePhone', Years_In_Department = $SUpdateYearsInDept, 
-              Years_as_head_of_Department = $SUpdateYearsHD, Supervisor_ID = '$SUpdateSupervisor', 
-              Last_Date_Modified = '$SUpdateLast_Modified', Last_Modified_By = '$SUpdateModifiedBy'
-          WHERE Employee_ID = '$SUpdateID';";
+  if($_POST['SUpdateSupervisor'] != ""){
+    $sql = "UPDATE specialist
+            SET Employee_Name = '$SUpdateName', Asso_Office = '$SUpdateOffice', Asso_Department = '$SUpdateDepartment', 
+                Sex = '$SUpdateSex', Available = '$SUpdateAvailable', Specialist_Practice = '$SUpdatePractice', 
+                Employee_Email = '$SUpdateEmail', Employee_Phone = '$SUpdatePhone', Years_In_Department = $SUpdateYearsInDept, 
+                Years_as_head_of_Department = $SUpdateYearsHD, Supervisor_ID = '$SUpdateSupervisor', 
+                Last_Date_Modified = '$SUpdateLast_Modified', Last_Modified_By = '$SUpdateModifiedBy'
+            WHERE Employee_ID = '$SUpdateID';";
+  }
+  elseif ($_POST['SUpdateSupervisor'] == ""){
+    $sql = "UPDATE specialist
+            SET Employee_Name = '$SUpdateName', Asso_Office = '$SUpdateOffice', Asso_Department = '$SUpdateDepartment', 
+                Sex = '$SUpdateSex', Available = '$SUpdateAvailable', Specialist_Practice = '$SUpdatePractice', 
+                Employee_Email = '$SUpdateEmail', Employee_Phone = '$SUpdatePhone', Years_In_Department = $SUpdateYearsInDept, 
+                Years_as_head_of_Department = $SUpdateYearsHD, 
+                Last_Date_Modified = '$SUpdateLast_Modified', Last_Modified_By = '$SUpdateModifiedBy'
+            WHERE Employee_ID = '$SUpdateID';";
+  }
   $result = mysqli_query($conn, $sql);
 
   if($result) {
