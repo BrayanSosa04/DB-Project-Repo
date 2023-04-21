@@ -10,8 +10,8 @@
     $rowS = mysqli_fetch_assoc($resultS);
     $add = $rowS['Inventory_Count'];
 
-    echo $Inventory_Count + $add;
-    
+    echo  $add;
+
     $sql = "UPDATE inventory
             SET inventory.Inventory_Count = $Inventory_Count + $add, inventory.Last_Modified_Date = '$Modified_Date'
             WHERE inventory.Inventory_ID = '$Inventory_ID' AND inventory.Flagged_Delete = 0;";
