@@ -61,7 +61,7 @@
       <button type = "submit" id = "IVsubmit" name = "IVsubmit">View Inventory </button>
 
       <br></br>
-      <button type = "submit" name = "submit_s" formaction = "addInv.php">Add New Item</button>
+      <button type = "submit" name = "submit_s" formaction = "addinv.php">Add New Item</button>
       <br></br>
       <button type = "submit" name = "submit_s" formaction = "OrderInv.php">Order an Item</button>
       <br></br>
