@@ -39,11 +39,11 @@
   </form>
 
   <table>This is the list of appointments:
-    <tr>
+    
         <th>Patient Name</th>
         <th>Patient's ID</th>
         <th>Appointment Date & Time</th>
-    </tr>
+    
     <?php
         include_once 'connectToTheDB.php';
 
@@ -53,7 +53,7 @@
 
         if($resultCheck > 0){
             while($row = mysqli_fetch_assoc($result)){
-                echo "<tr><td>" . $row['Patient_Name'] . "</td><td>" . $row['Patient_ID'] . "</td><td>" . $row['Appointment_Time'] . "</td></tr>";
+                echo "<tr><td>" . $row['Patient_Name'] . "</td><td>" . $row['Patient_ID'] . "</td><td>" . $row['Appointment_Time'] . "</td><td>";
             }
         }
         else{
