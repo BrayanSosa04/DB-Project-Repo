@@ -28,10 +28,10 @@ text-align: center;
       </select>
     <br></br>
     <label for = "Inv_Count">Please input the amount you would like to add/remove:</label>
-    <input type = "number" id = "Inv_Count" Inv_Count = "Inv_Count" name = "Inv_Count">
+    <input type = "number" id = "Inv_Count" Inv_Count = "Inv_Count" name = "Inv_Count" placeholder = "use '-' infront to remove">
 
     <br></br>
-    <button type = "submit" name = "submit">Order </button>
+    <button type = "submit" name = "submit">Update</button>
     <button type = "submit" name = "submit_s" formaction="Doc.php">Return to main page</button>
 
 </form>

@@ -62,7 +62,7 @@
 
       <br></br>
       <button type = "submit" name = "submit_s" formaction = "addinv.php">Add New Item</button>
-      <button type = "submit" name = "submit_s" formaction = "OrderInv.php">Order an Item</button>
+      <button type = "submit" name = "submit_s" formaction = "OrderInv.php">Update an Item</button>
       <button type = "submit" name = "submit_sd" formaction = "deleteInv.php">Delete Existing Item</button>
     </form>
 
