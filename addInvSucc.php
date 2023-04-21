@@ -17,7 +17,7 @@
         $Mod_By = $_POST['Mod_By'];
 
         $sql = "INSERT INTO inventory(Inventory_ID, Inventory_Name, Asso_Office, Inventory_Count, Inventory_Cost, Date_Purchased, Expiration_Date Last_Modified_Date, Last_Modified_By, Flagged_Delete)
-                VALUES('$Inv_ID', '$Inv_Name', '$Inv_Off', '$Inv_Count', '$Inv_cost' '$Inv_TD', '$Inv_TD', '$Mod_By', 0);";
+                VALUES($Inv_ID, '$Inv_Name', '$Inv_Off', $Inv_Count, $Inv_cost, '$Inv_TD', '$Inv_TD', '$Mod_By', 0);";
 
         $result = mysqli_query($conn, $sql);
         if($result){
