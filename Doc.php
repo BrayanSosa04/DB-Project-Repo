@@ -32,7 +32,7 @@
   <section id="PV">
     <h2 id="patients">Patients</h2>
     <form action = "show_patients.php" method = "GET">
-      <label for = "PVinput">Please input Patient ID to see their history:</label>
+      <label for = "PVinput">Please select a patient to see their history:</label>
       <select id = "PVinput" PVinput = "PVinput" name = "PVinput">
         <?php 
           include_once 'connectToTheDB.php';
@@ -48,6 +48,7 @@
         ?>
       </select>
 
+      <br></br>
       <button type = "submit" id = "PVsubmit" name = "PVsubmit">View Patients </button>
       <br></br>
       <button type = "submit" name = "submit_s" formaction = "addMH.php">Add Medical History for a Patient</button>

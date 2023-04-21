@@ -37,4 +37,28 @@
     <button type = "submit" name = "submit" >Finish Adding Medical History</button>
     <button type = "submit" name = "submit_s" formaction="show_patients.php">Return to Patient History page</button>
   </form>
+
+  <table>This is the list of appointments:
+    <tr>
+        <th>Patient Name</th>
+        <th>Patient's ID</th>
+        <th>Appointment Date & Time</th>
+    </tr>
+    <?php
+        include_once 'connectToTheDB.php';
+
+        $sql = "SELECT Patient_Name, Patient_ID, Appointment_Time FROM appointments;";
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+
+        if($resultCheck > 0){
+            while($row = mysqli_fetch_assoc($result)){
+                echo "<tr><td>" . $row['Patient_Name'] . "</td><td>" . $row['Patient_ID'] . "</td><td>" . $row['Appointment_Time'] . "</td><td>";
+            }
+        }
+        else{
+            echo "Sorry it looks like there are no appointments";
+        }
+    ?>
+  </table>
 </body>
