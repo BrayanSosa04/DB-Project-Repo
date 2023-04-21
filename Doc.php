@@ -36,6 +36,8 @@
       <input type = "text" id = "PVinput" PVinput = "PVinput" name = "PVinput">
 
       <button type = "submit" id = "PVsubmit" name = "PVsubmit">View Patients </button>
+      <br></br>
+      <button type = "submit" name = "submit_s" formaction = "addMH.php">Add Medical History for a Patient</button>
     </form>
   </section>
   
