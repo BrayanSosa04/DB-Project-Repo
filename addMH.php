@@ -17,7 +17,7 @@
   <p>**Please Note that to add medical history for a patient, said patient must have an appointment in the table below**</p>
   <form action = "addMHSucc.php" method = "POST">
     <label for = "Pat_ID">Patient ID:</label>
-    <input type = "text" id = "Pat_ID" Pat_ID = "Pat_ID" name = "Pat_ID" maxlength = "10">
+    <input type = "text" id = "Pat_ID" Pat_ID = "Pat_ID" name = "Pat_ID" maxlength = "7">
 
     <label for = "Pat_Name">Patient Name:</label>
     <input type = "text" id = "Pat_Name" Pat_Name = "Pat_Name" name = "Pat_Name" maxlength = "30">
@@ -34,10 +34,10 @@
     <br></br>
 
     <label for = "Pat_Test">Diagnostic Test:</label>
-    <input type = "text" id = "Pat_Test" Pat_Test = "Pat_Test" name = "Pat_Test">
+    <input type = "text" id = "Pat_Test" Pat_Test = "Pat_Test" name = "Pat_Test" maxlength = "1000">
 
     <label for = "Pat_Result">Diagnostic Result:</label>
-    <input type = "text" id = "Pat_Result" Pat_Result = "Pat_Result" name = "Pat_Result">
+    <input type = "text" id = "Pat_Result" Pat_Result = "Pat_Result" name = "Pat_Result" maxlength = "1000">
 
     <br></br>
     <label for = "Asso_Phy">Associated Physician:</label>

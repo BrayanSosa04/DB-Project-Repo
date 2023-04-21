@@ -24,7 +24,7 @@
                             Asso_Physician, Asso_Specialist, Patient_Age, Patient_Sex, Appointment_Time, Date_Created, 
                             Last_Modified_Date, Last_Modified_By, Medical_History_ID, Flagged_Delete)
                 VALUES('$Pat_ID', '$Pat_Name', '$Pat_Test', '$Pat_Result', 
-                       '$Asso_Phy', '$Asso_Spec', $Pat_Age, '$Pat_Sex', '$Apt_Date', '$Pat_TD', 
+                       '$Asso_Phy', '$Asso_Spec', '$Pat_Age', '$Pat_Sex', '$Apt_Date', '$Pat_TD', 
                        '$Pat_TD', '$Emp_ID', '$Med_ID', 0);";
 
         $result = mysqli_query($conn, $sql);
