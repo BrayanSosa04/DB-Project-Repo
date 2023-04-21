@@ -30,13 +30,15 @@
         <option value = "F">Female</option>
         <option value = "O">Other</option>
       </select>
+    <br></br>
 
     <label for = "Pat_Test">Diagnostic Test:</label>
     <input type = "text" id = "Pat_Test" Pat_Test = "Pat_Test" name = "Pat_Test">
 
     <label for = "Pat_Result">Diagnostic Result:</label>
     <input type = "text" id = "Pat_Result" Pat_Result = "Pat_Result" name = "Pat_Result">
-
+    
+    <br></br>
     <label for = "Asso_Phy">Associated Physician:</label>
     <select id = "Asso_Phy" Asso_Phy = "Asso_Phy" name = "Asso_Phy">
         <?php 
@@ -99,7 +101,7 @@
     text-align: center;
     }
 </style>
-This is the list of appointments:
+<p>This is the list of appointments:</p>
   <table style = "float:left">
     <tr>
         <th>Patient Name</th>
