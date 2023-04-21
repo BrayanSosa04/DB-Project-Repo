@@ -73,8 +73,8 @@
         ?>
     </select>
 
-    <label for = "Apt_Date">Appointment Date: </label>
-    <input type = "date" id = "Apt_Date" Apt_Date = "Apt_Date" name = "Apt_Date">
+    <label for = "Apt_Date">Appointment Date:</label>
+    <input type = "datetime" id = "Apt_Date" Apt_Date = "Apt_Date" name = "Apt_Date">
 
     <br></br>
     <label for = "Emp_ID">Please input your ID:</label>
