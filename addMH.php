@@ -52,33 +52,27 @@
     text-align: center;
     }
 </style>
-<table>Office Report:
-  <tr>
-    <th>Office ID</th>
-    <th>Address</th>
-    <th>Number of Departments</th>
-    <th>Number of Specialists</th>
-  </tr>
-  <?php
-    include_once 'connectToTheDB.php';
+  <table>This is the list of appointments:
+    <tr>
+        <th>Patient Name</th>
+        <th>Patient's ID</th>
+        <th>Appointment Date & Time</th>
+    </tr>
+    <?php
+        include_once 'connectToTheDB.php';
 
-    $OSVinput = $_GET['OSVinput'];
-    $OSVinput2 = $_GET['OSVinput2'];
-    $sql = "SELECT * 
-            FROM office_info
-            WHERE Number_Of_Departments >= '$OSVinput' AND Number_Of_Specialist >= '$OSVinput2';";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
+        $sql = "SELECT Patient_Name, Patient_ID, Appointment_Time FROM appointments;";
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
 
-    //If error, add $ infront of OSVinput and OSVinput2 in the WHERE clause of sql2. Other issues might arrise from AND and ';"
-
-    if($resultCheck > 0) {
-      while($row = mysqli_fetch_assoc($result)) {
-        echo "<tr><td>" . $row["OFFICE_ID"] . "</td><td>" . $row["ADDRESS"] . "</td><td>" . $row["Number_Of_Departments"] . "</td><td>" . $row["Number_Of_Specialist"] . "</td></tr>";
-      }
-    } else {
-      echo "No office found";
-    }
-  ?>
-</table>
+        if($resultCheck > 0){
+            while($row = mysqli_fetch_assoc($result)){
+                echo "<tr><td>" . $row['Patient_Name'] . "</td><td>" . $row['Patient_ID'] . "</td><td>" . $row['Appointment_Time'] . "</td></tr>";
+            }
+        }
+        else{
+            echo "Sorry it looks like there are no appointments";
+        }
+    ?>
+  </table>
 </body>
