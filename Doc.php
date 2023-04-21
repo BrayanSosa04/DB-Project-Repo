@@ -56,30 +56,19 @@
           <?php
             }
           ?>
-          <label for = "IVusedinput">Please input the number used for the inventory item:</label>
-        <select id = "IVusedinput" IVusedinput = "IVusedinput" name = "IVusedinput">
-        <?php 
-              include_once 'connectToTheDB.php';
-
-              $IVinput = $_GET['IVinput'];
-              $IVusedinput = $_GET['IVusedinput'];
-
-              $sqlI2 = "SELECT Inventory_Count FROM inventory WHERE IVinput = 'IVinput';"; //select the amount dependent on the name of the inventory item
-              $total = $sqlI2 - $IVusedinput;
-              $sqlI3 = "INSERT INTO inventory(Inventory_Count) VALUES ('$total');";
-              $sqlI4 = "SELECT * FROM inventory;";
-              $resultI =  mysqli_query($conn, $sqlI4);
-
-              while($rI = mysqli_fetch_array($resultI)){
-            ?>
-                <option value = "<?php echo $rI['Inventory_Name']; ?>"><?php echo $rI['Inventory_Name']; ?></option>
-            <?php
-              }
-            ?>
       </select>
       <br></br>
       <button type = "submit" id = "IVsubmit" name = "IVsubmit">View Inventory </button>
+
+      <br></br>
+      <button type = "submit" name = "submit_s" formaction = "addInv.php">Add New Item</button>
+      <br></br>
+      <button type = "submit" name = "submit_s" formaction = "OrderInv.php">Order an Item</button>
+      <br></br>
+      <button type = "submit" name = "submit_sd" formaction = "deleteInv.php">Delete Existing Item</button>
     </form>
+
+    
   </section>
 
   
