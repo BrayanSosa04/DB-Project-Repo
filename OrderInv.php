@@ -32,6 +32,7 @@ text-align: center;
 
     
     <button type = "submit" name = "submit">Order </button>
+    <button type = "submit" name = "submit_s" formaction="Doc.php">Return to main page</button>
 
 </form>
 
@@ -45,10 +46,9 @@ text-align: center;
   <?php
     include_once 'connectToTheDB.php';
 
-    $IVinput = $_GET['Inv_name'];
     $sql4 = "SELECT Inventory_ID, Inventory_Name, Asso_Office, Inventory_Count
              FROM inventory
-             WHERE Inventory_Name = '$IVinput' AND inventory.Flagged_Delete = 0;";
+             WHERE inventory.Flagged_Delete = 0;";
   $result4 = mysqli_query($conn, $sql4);
   $resultCheck4 = mysqli_num_rows($result4);
 

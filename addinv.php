@@ -49,6 +49,6 @@
     <input type = "date" id = "Inv_TD" Inv_TD = "Inv_TD" name = "Inv_TD">
     <br></br>
     <button type = "submit" name = "submit" >Finish Adding Item</button>
-    <button type = "submit" name = "submit_s" formaction="CEO.php">Return to main page</button>
+    <button type = "submit" name = "submit_s" formaction="Doc.php">Return to main page</button>
   </form>
 </body>
