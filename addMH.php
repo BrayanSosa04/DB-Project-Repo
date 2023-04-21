@@ -77,6 +77,9 @@
     <input type = "datetime-local" id = "Apt_Date" Apt_Date = "Apt_Date" name = "Apt_Date">
 
     <br></br>
+    <label for = "Med_ID">Please input the medical history ID:</label>
+    <input type = "text" id = "Med_ID" Med_ID = "Med_ID" name = "Med_ID" maxlength = "45">
+
     <label for = "Emp_ID">Please input your ID:</label>
     <input type = "text" id = "Emp_ID" Emp_ID = "Emp_ID" name = "Emp_ID" maxlength = "7">
     
