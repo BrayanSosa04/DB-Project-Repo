@@ -15,9 +15,19 @@ Login.php, Login.inc.php, and Login.css create the login web page. Login.php als
 
 1.4) Patients
 
-In the patient's web page, 
+The main web page of the patient's view is comprised by patient.php, patient.css, and patient.js.
+
+The patient's web page allows for the patient to view, change, and delete appointments as well as viewing their medical history. Viewing medical history is accomplished by the viewMedicalHistory.php file while viwing appointments is accomplished by viewAppointments.php. Changing appointments is done through changeAppointment.php and changeAppointmentSucc.php, with the latter file connecting to the database using the input provided in the former. Lastly, deleting appointments is with deleteAppointment.php and deleteAppointmentSucc.php.
 
 1.5) Doctors
+
+The doctor web page is created by Doc.php, using doc_script.js and doc_style.css to view inventory, patients, and schedule, as well as for the addition of inventory and patient's medical history, the modification of medical history, ordering inventory, and deletion of inventory.
+
+Viewing inventory, patients, and schedule are accomplished by show_inv.php, show_patients.php, and show_schedule.php respectively.
+
+addinv.php and addMH.php allow for the creation of new tuples in the database for the inventory and medical history tables respectively, both connected by the addInvSucc.php and addMHSucc.php files.
+
+Modifying medical history is done through changeMH.php, changeMHDetail.php, and changeMHDetailSucc.php and the deletion of inventory is accompplished by deleteInv.php and deleteInvSucc.php.
 
 1.6) CEO
 
