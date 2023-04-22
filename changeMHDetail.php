@@ -23,7 +23,7 @@ text-align: center;
     <button type = "submit" name = "submit_s" formaction="Doc.php">Return to the main page</button>
 </form>
 
-<p>This is the patient's medical history:</p>
+<p>This is the patient's current medical history:</p>
 <table style = "float:left">
     <tr>
       <th>Patient ID</th>
