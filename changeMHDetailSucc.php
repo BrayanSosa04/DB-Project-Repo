@@ -15,3 +15,7 @@
         echo "Sorry it looks like we could not update this patients medical history";
     }
 ?>
+
+<form action = "Doc.php">
+    <button type = "submit" name = "submit">Return to Patient History page</button>
+</form>
