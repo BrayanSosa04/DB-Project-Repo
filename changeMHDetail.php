@@ -23,7 +23,8 @@ text-align: center;
     <button type = "submit" name = "submit_s" formaction="Doc.php">Return to the main page</button>
 </form>
 
-<table style = "float:left">This patients medical history:
+<p>This is the patient's medical history:</p>
+<table style = "float:left">
     <tr>
       <th>Patient ID</th>
       <th>Patient Name</th>
@@ -38,7 +39,7 @@ text-align: center;
 
         $pat = $_POST['pat'];
 
-        $sql = "SELECT m.Patient_ID, m.Patient_Name, m.Diagnosis_Test, m.Diagnosis_Results, m.Appointment_Time
+        $sql = "SELECT m.Patient_ID, m.Patient_Name, m.Diagnosis_Test, m.Diagnosis_Results, m.Appointment_Time, m.Medical_History_ID
                 FROM medical_history as m
                 WHERE m.Patient_ID = '$pat' AND m.Flagged_Delete = 0;";
 
