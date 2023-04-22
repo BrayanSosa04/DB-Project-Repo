@@ -13,6 +13,8 @@ Login.php, Login.inc.php, and Login.css create the login web page. Login.php als
 
 1.3) Register
 
+The registration page is comprised of Register.php, RegisterPAT.php, and Register.css.
+
 1.4) Patients
 
 The main web page of the patient's view is comprised by patient.php, patient.css, and patient.js.
