@@ -1,6 +1,8 @@
 # DB-Project-Repo
 This is the GitHub repo for Team 1's Medical Clinic Database front-end application, containing the files necessary to run the database website.
 
+Website Link: http://ec2-3-12-136-12.us-east-2.compute.amazonaws.com/Login.php
+
 1) Files
 
 1.1) Connection Files
@@ -45,7 +47,7 @@ Lastly, the CEO web page's revenue report is made possible by revenue_report.php
 
 2) Installation 
 
-We will begin by asking you to please load in the dump file titled "" into MySQL(install MySQL if you haven't already: https://dev.mysql.com/downloads/installer/)
+We will begin by asking you to please load in the dump file titled "submission_dump.sql" into MySQL(install MySQL if you haven't already: https://dev.mysql.com/downloads/installer/)
  
  **Please title both the schema and database "clinic_db", have the user as "root", and set the password to "Valentina04.". We are also assuming that your MySQL port is 3306 if it is not, please change it to 3306.**
 
@@ -59,6 +61,7 @@ We will continue by showing the two ways that you can run the files locally (ass
             * Please follow the instructions of the setup wizard and use the default options(installation can take a minute) <br>
             * Open up XAMPP and click both of the start buttons for Apache and MySQL (if the MySQL button errors change the both ports to 3307 by clicking "config" and then "my.ini" for MySQL inside XAMPP , use this link for any extra help: https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/ ) <br>
             * Now open the files manager and go to "C:\xampp\htdocs" and create a folder (title it whatever you would like I called it Database)
+            * Proceed to load in all files found in this repository into the folder that you have created (please do not load them in by simply throwing all the files in as a folder/zip)
             * Now open a browser like google chrome and proceed to type in "localhost/Name_That_You_Chose_To_Give_Your_Folder/Login.php" inside the URL bar/status bar/search bar, you should now be able to host this website locally.
             
             
