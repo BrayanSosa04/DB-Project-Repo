@@ -9,16 +9,28 @@ text-align: center;
 }
 </style>
 <form action = "changeMHDetailSucc.php" method = "POST">
+    <label for = "MHID">Input the medical history ID you would like to change:</label>
+    <input type = "text" id = "MHID" MHID = "MHID" name = "MHID" maxlength = "45">
 
+    <br></br>
+
+    <label for = "DT">Please update the diagnosis test:</label>
+    <input type = "text" id = "DT" DT = "DT" name = "DT" maxlength= "1000">
+
+    <br></br>
+
+    <button type = "submit" name = "submit" >Update the patient's Medical History</button>
+    <button type = "submit" name = "submit_s" formaction="Doc.php">Return to the main page</button>
 </form>
 
-<table>
+<table style = "float:left">This patients medical history:
     <tr>
       <th>Patient ID</th>
       <th>Patient Name</th>
       <th>Diagnosis Test</th>
       <th>Diagnosis Result</th>
       <th>Date of the Appointment</th>
+      <th>Medical History ID</th>
     </tr>
 
     <?php
@@ -35,7 +47,7 @@ text-align: center;
 
         if($resultCheck > 0){
             while($r = mysqli_fetch_assoc($result)){
-                echo "<tr><td>" . $r['Patient_ID'] . "</td><td>" . $r['Patient_Name'] . "</td><td>" . $r['Diagnosis_Test'] . "</td><td>" . $r['Diagnosis_Results'] . "</td><td>" . $r['Appointment_Time'] . "</td></tr>";
+                echo "<tr><td>" . $r['Patient_ID'] . "</td><td>" . $r['Patient_Name'] . "</td><td>" . $r['Diagnosis_Test'] . "</td><td>" . $r['Diagnosis_Results'] . "</td><td>" . $r['Appointment_Time'] . "</td><td>" . $r['Medical_History_ID'] . "</td></tr>";
             }
         }
         else{
