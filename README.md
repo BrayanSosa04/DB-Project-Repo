@@ -43,4 +43,23 @@ The CEO web page also has access to pulling a report for doctors, as well as the
 
 Lastly, the CEO web page's revenue report is made possible by revenue_report.php and revenue_report2.php.
 
-2) Installation
+2) Installation 
+
+We will begin by asking you to please load in the dump file titled "" into MySQL(install MySQL if you haven't already: https://dev.mysql.com/downloads/installer/)
+ 
+ **Please title both the schema and database "clinic_db", have the user as "root", and set the password to "Valentina04.". We are also assuming that your MySQL port is 3306 if it is not, please change it to 3306.**
+
+We will continue by showing the two ways that you can run the files locally (assuming that you have already downloaded all of the files in this repository):<br>
+  2.1) Install an extension in VS code titled "php server" <br>
+            * Right click inside of the login file and select run php server
+          
+  2.2) Install XAMPP on your device <br>
+            * Begin by downloading the XAMPP application using this link: https://www.apachefriends.org/ <br>
+          **Make sure that you install the right version(linux/windows/mac) and click on the setup wizard once it is done downloading**<br>
+            * Please follow the instructions of the setup wizard and use the default options(installation can take a minute) <br>
+            * Open up XAMPP and click both of the start buttons for Apache and MySQL (if the MySQL button errors change the both ports to 3307 by clicking "config" and then "my.ini" for MySQL inside XAMPP , use this link for any extra help: https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/ ) <br>
+            * Now open the files manager and go to "C:\xampp\htdocs" and create a folder (title it whatever you would like I called it Database)
+            * Now open a browser like google chrome and proceed to type in "localhost/Name_That_You_Chose_To_Give_Your_Folder/Login.php" inside the URL bar/status bar/search bar, you should now be able to host this website locally.
+            
+            
+                 
