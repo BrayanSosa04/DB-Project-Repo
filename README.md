@@ -3,9 +3,11 @@ This is the GitHub repo for Team 1's Medical Clinic Database front-end applicati
 
 1) Files
 
-1.1) Database Connection
+1.1) Connection Files
 
 The file connectToTheDB.php allows for the the front-end application to connect to the database, allowing for insertion, modification, and deletion of data. Any file which requires a connection to the database includes this file.
+
+.gitattributes allows for the front-end application to connect to the GitHub repo.
 
 1.2) Login
 
