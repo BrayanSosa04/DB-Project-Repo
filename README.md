@@ -1,6 +1,7 @@
 # DB-Project-Repo
 This is the GitHub repo for Team 1's Medical Clinic Database front-end application, containing the files necessary to run the database website.
 
+1) Files
 The file connectToTheDB.php allows for the the front-end application to connect to the database, allowing for insertion, modification, and deletion of data. Any file which requires a connection to the database includes this file.
 
 Login.php, Login.inc.php, and Login.css create the login web page. Login.php also links to Register.php, RegisterPAT.php, and Register.css, which create the webpage allowing for the registration of a new user account in the database.
