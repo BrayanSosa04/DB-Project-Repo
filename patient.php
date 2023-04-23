@@ -82,7 +82,7 @@ body {
 
   <div id="VA" class="tabContent">
     <form action = "viewAppointments.php" method = "GET">
-      <label for = "Patient_ID_VA">Please input your ID:</label>
+      <label for = "Patient_ID_VA">Please input your patient ID:</label>
       <input type = "text" id = "Patient_ID_VA" Patient_ID_VA = "Patient_ID_VA" name = "Patient_ID_VA" maxlength="7">
       <button type = "submit" name = "submit" >View Appointment</button>
     </form>
@@ -90,7 +90,7 @@ body {
 
   <div id = "RA" class = "tabContent">
   <form action = "changeAppointment.php" method = "GET">
-    <label for = "Patient_ID_RA">Please input your ID:</label>
+    <label for = "Patient_ID_RA">Please input your patient ID:</label>
     <input type = "text" id = "Patient_ID_RA" Patient_ID_RA = "Patient_ID_RA" name = "Patient_ID_RA" maxlength="7">
     <button type = "submit" name = "submit" >View Appointment to Re-schedule</button>
   </form>
@@ -98,7 +98,7 @@ body {
 
   <div id = "DA" class = "tabContent">
   <form action = "deleteAppointment.php" method = "GET">
-    <label for = "Patient_ID_DA">Please input your ID:</label>
+    <label for = "Patient_ID_DA">Please input your patient ID:</label>
     <input type = "text" id = "Patient_ID_DA" Patient_ID_DA = "Patient_ID_DA" name = "Patient_ID_DA" maxlength="7">
     <button type = "submit" name = "submit" >View Appointment to Delete</button>
   </form>
@@ -107,7 +107,7 @@ body {
   <div id="CA" class="tabContent">
     <form action = "createAppointment.php" method = "POST">
       <!--Name of the patient with ID "patientID" that corresponds to Patient_ID to the DB-->
-      <label for = "Patient_ID_Appointment">ID:</label>
+      <label for = "Patient_ID_Appointment">Patient ID:</label>
       <input type = "text" id = "Patient_ID_Appointment" Patient_ID = "Patient_ID_Appointment" name = "Patient_ID_Appointment" maxlength="7">
 
       <!--Name of the patient with id "Name" that corresponds to Patient_Name to the DB-->
@@ -216,7 +216,7 @@ body {
 
   <div id="VMH" class="tabContent">
     <form action = "viewMedicalHistory.php" method = "GET">
-      <label for = "Patient_ID_VMH">Please input your ID:</label>
+      <label for = "Patient_ID_VMH">Please input your patient ID:</label>
       <input type = "text" id = "Patient_ID_VMH" Patient_ID_VMH = "Patient_ID_VMH" name = "Patient_ID_VMH" maxlength="7">
       <button type = "submit" name = "submit" >View Medical History</button>
     </form>

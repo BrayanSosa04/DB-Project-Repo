@@ -136,7 +136,7 @@
         ?>
       </select>
 
-      <label for = "SUpdateModifiedBy">Change Your Employee ID:</label>
+      <label for = "SUpdateModifiedBy">Your Employee ID:</label>
       <input type = "text" id = "SUpdateModifiedBy" SUpdateModifiedBy = "SUpdateModifiedBy" name = "SUpdateModifiedBy">
 
       <br></br>

@@ -12,15 +12,15 @@
   <script src="doc_script.js"></script>
 
   <section id="overview">
-    <button id="SVtoggle" onclick="toggleSV()">Show Schedule </button>
-    <button id="PVtoggle" onclick="togglePV()">Show Patients </button>
+    <button id="SVtoggle" onclick="toggleSV()">Show Specialist Schedule </button>
+    <button id="PVtoggle" onclick="togglePV()">Show Patients Medical History</button>
     <button id="IVtoggle" onclick="toggleIV()">Show Inventory</button>
   </section>
 
   <section id="SV">
     <h2 id="schedule">Schedule</h2>
     <form action = "show_schedule.php" method = "GET">
-      <label for = "SVinput">Please input Employee ID:</label>
+      <label for = "SVinput">Please input Specialist ID:</label>
       <input type = "text" id = "SVinput" SVinput = "SVinput" name = "SVinput">
 
       <label for = "SV_DT">Please input the minimum date and time from which you would like to see the appointments:</label>

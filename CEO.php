@@ -42,7 +42,20 @@
       <input type = "text" id = "DSVinput" DSVinput = "DSVinput" name = "DSVinput">
 
       <label for = "DSVinput2">Office ID:</label>
-      <input type = "text" id = "DSVinput2" DSVinput = "DSVinput2" name = "DSVinput2"><br></br>
+      <select id = "DSVinput2" DSVinput = "DSVinput2" name = "DSVinput2">
+      <?php 
+        include_once 'connectToTheDB.php';
+
+        $sqlO = "SELECT * FROM offices WHERE Flagged_Delete = 0;";
+        $resultO = mysqli_query($conn, $sqlO);
+
+        while($rO = mysqli_fetch_array($resultO)){
+      ?>
+          <option value= "<?php echo $rO['OFFICE_ID']?>"><?php echo $rO['ADDRESS']?></option>
+      <?php
+        }
+      ?>
+      </select><br></br>
       <button type = "submit" id = "DSVsubmit" name = "DSVsubmit">View Doctor Report</button>
       
       <br></br>

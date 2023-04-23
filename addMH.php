@@ -81,7 +81,7 @@
     <input type = "text" id = "Med_ID" Med_ID = "Med_ID" name = "Med_ID" maxlength = "45">
 
     <label for = "Emp_ID">Please input your ID:</label>
-    <input type = "text" id = "Emp_ID" Emp_ID = "Emp_ID" name = "Emp_ID" maxlength = "7">
+    <input type = "text" id = "Emp_ID" Emp_ID = "Emp_ID" name = "Emp_ID" maxlength = "7" placeholder = "physician or specialist ID only">
     
     <label for = "Pat_TD">Today's Date:</label>
     <input type = "date" id = "Pat_TD" Pat_TD = "Pat_TD" name = "Pat_TD">
