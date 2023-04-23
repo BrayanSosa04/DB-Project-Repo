@@ -22,7 +22,7 @@ We will continue by showing the two ways that you can run the files locally (ass
           
   2. Install XAMPP on your device <br>
     2.1) Begin by downloading the XAMPP application using this link: https://www.apachefriends.org/ <br>
-    **Make sure that you install the right version(linux/windows/mac) and click on the setup wizard once it is done downloading**
+    **Make sure that you install the right version(linux/windows/mac) and click on the setup wizard once it is done downloading**<br>
     2.2) Please follow the instructions of the setup wizard and use the default options(installation can take a minute) <br>
     2.3) Open up XAMPP and click both of the start buttons for Apache and MySQL (if the MySQL button errors change the both ports to 3307 by clicking "config" and then "my.ini" for MySQL inside XAMPP , use this link for any extra help: https://kinsta.com/knowledgebase/xampp-mysql-shutdown-unexpectedly/ ) <br>
     2.4) Now open the files manager and go to "C:\xampp\htdocs" and create a folder (title it whatever you would like I called it Database) <br>
