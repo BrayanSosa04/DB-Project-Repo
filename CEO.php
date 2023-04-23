@@ -41,7 +41,7 @@
       <label for = "DSVinput">Salary:</label>
       <input type = "text" id = "DSVinput" DSVinput = "DSVinput" name = "DSVinput">
 
-      <label for = "DSVinput2">Office ID:</label>
+      <label for = "DSVinput2">Select office:</label>
       <select id = "DSVinput2" DSVinput = "DSVinput2" name = "DSVinput2">
       <?php 
         include_once 'connectToTheDB.php';
