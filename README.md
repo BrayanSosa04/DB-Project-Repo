@@ -1,7 +1,7 @@
 # DB-Project-Repo-Installation-&-File-Info
 This is the GitHub repo for Team 1's Medical Clinic Database front-end application, containing the files necessary to run the database website.
 
-Website Link: http://ec2-3-12-136-12.us-east-2.compute.amazonaws.com/Login.php
+Website Link: http://ec2-3-12-136-12.us-east-2.compute.amazonaws.com/Login.php (The EC2 instance for this link has been terminated so this no longer works)
 
 ## Backend/FrontEnd Usage
 
